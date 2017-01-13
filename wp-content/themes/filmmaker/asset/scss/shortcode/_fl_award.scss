@@ -1,0 +1,29 @@
+/*==== awards ===== */
+.content-award{
+    line-height: 1.7em;
+    color:$Black;
+    padding:0 30px;
+    font-family:$fr;
+    font-size:30px;
+    i{
+        font-weight:900;
+    }
+    b{
+        font-weight:400;
+    }
+}
+
+.awards-item{
+    opacity:0.5;
+    text-align: center;
+     &:hover{
+        opacity:1;
+    }
+}
+.awards{
+    padding-bottom:200px;
+    .title-box{
+        padding:80px 0 50px 0;
+    }
+}
+/*==== end awards ===== */

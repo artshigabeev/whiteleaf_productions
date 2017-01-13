@@ -1,0 +1,126 @@
+/*
+Theme Name: filmmaker
+Theme URI: http://filmmaker.beautheme.com
+Author: BeauTheme
+Author URI: http://beautheme.com/
+Description: Filmmaker theme that the main theme for Filmmaker band, and, .
+Version: 1.0.8
+License:  GNU General Public License v3.0
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Text Domain: filmmaker
+Tags: one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, full-width-template, microformats, post-formats, theme-options
+Copyright: (c) 2015 BeauTheme.
+*/
+.sticky{
+    position: relative;
+}
+.sticky:before {
+    position: absolute;
+    content:"";
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    border-right:2px solid #000;
+}
+
+.sticky:hover {
+}
+.wp-caption{
+    text-align: center;
+    margin-bottom: 40px;
+}
+.wp-caption-text{
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.gallery-caption {}
+
+.container img{
+    max-width: 100%!important;
+    height: auto;
+}
+.entry-content div{
+    max-width: 100%!important;
+}
+
+.bypostauthor {}
+
+.alignright {
+    float: right;
+    margin-left: 15px;
+}
+
+.alignleft {
+    float: left;
+    margin: 15px;
+}
+
+.aligncenter {}
+
+.gallery-caption, .aligncenter, .bypostauthor, .aligncenter {
+    margin-top: 40px;
+}
+
+.edit-link {
+    text-align: center;
+    float: left;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.nothing-found {
+    display: block;
+    margin-bottom: 30px;
+}
+.screen-reader-text{}
+.stick-scroll {
+    z-index: 99;
+}
+.pagination-film {
+    padding-top : 10px;
+}
+
+@media only screen and (max-width : 767px){
+    .director_img_cover img {
+        width : 100%;
+        height: auto;
+    }
+    .director_img_cover .director_detail_name {
+        font-size  : 20px;
+        letter-spacing: 5px;
+    }
+}
+.single-gallery .click_play {
+    left: 50%;
+    top: 50%;
+    width: 50px !important;
+    height: 50px !important;
+    bottom: auto;
+    right: auto;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    position: absolute;
+}
+.single-gallery .modal-body iframe {
+    width : 900px !important;
+    height: 542px !important;
+}
+#form-contact2 .form .list-social li a span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}

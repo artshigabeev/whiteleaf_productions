@@ -1,0 +1,141 @@
+/* global redux_change, wp */
+
+(function($) {
+    "use strict";
+    $.redux = $.redux || {};
+    $(document).ready(function() {
+        $.redux.wbc_importer();
+    });
+    $.redux.wbc_importer = function() {
+
+        $('.wrap-importer.theme.not-imported, #wbc-importer-reimport').unbind('click').on('click', function(e) {
+            e.preventDefault();
+            var parent = jQuery(this);
+            var reimport = false;
+            var message = 'WARNING : \n\n';
+            message += '+ Importing demo content will give you sliders, pages, posts, theme options, widgets, sidebars and other settings\n\n';
+            message += '+ There are a lot of media content so this process may need several minutes to complete';
+            if (e.target.id == 'wbc-importer-reimport') {
+                reimport = true;
+                message = 'Re-Import Content?';
+                if (!jQuery(this).hasClass('rendered')) {
+                    parent = jQuery(this).parents('.wrap-importer');
+                }
+            }
+            if (parent.hasClass('imported') && reimport == false) return;
+            var r = confirm(message);
+            if (r == false) return;
+            if (reimport == true) {
+                parent.removeClass('active imported').addClass('not-imported');
+            }
+            jQuery('.form-table').append('<div class = "result-container"><p class = "result-title">IMPORT RESULT : </p></div>');
+            parent.find('.loader').parent().addClass('importing');
+            parent.find('.spinner').css('display', 'inline-block');
+            parent.removeClass('active imported');
+            parent.find('.importer-button').hide();
+            var data = jQuery(this).data();
+
+            data.action = "redux_wbc_importer";
+            data.demo_import_id = parent.attr("data-demo-id");
+            data.nonce = parent.attr("data-nonce");
+            data.type = 'import-demo-content';
+            data.wbc_import = (reimport == true) ? 're-importing' : ' ';
+            data.current_process = 'posts_content';
+            data.fetch_attachments = true;
+            var layout ='<div class="beau-percen-screen">';
+            layout +='<div id="beau-percen-text">0%</div>';
+            layout +='<div class="beau-process-bar"></div>';
+            layout +='<div class="beau-message"></div>';
+            layout +='<button class="close-import disable">Import data</button>';
+            layout +='</div><!--End .beau-percen-screen-->';
+            jQuery('body').append(layout);
+            jQuery('.beau-percen-screen').addClass('active');
+            jQuery('#wpbody-content li a').click(function(e){
+                return false;
+            });
+            doProcess(data);
+            return false;
+        });
+    };
+
+    function resultFinal(){
+        // jQuery('.beau-percen-screen').removeClass('active');
+        jQuery('#beau-percen-text').text('100%');
+        jQuery('.beau-message').text('Import complete');
+        jQuery('.close-import').removeClass('disable').addClass('active').text('Close Screen');
+        $('.theme-screenshot').removeClass('importing');
+        $('.spinner').hide();
+        $('#wbc-importer-reimport').show();
+        // setInterval(function(){ jQuery('.beau-percen-screen').remove() }, 1000);
+    }
+
+    function showCurrentProcess(str){
+        var text= "Import data";
+        switch(str) {
+            case 'posts_content':
+                text = "Import content ( about 15 minutes)...";
+                break;
+            case 'setting_page':
+                text = "Import page setting ...";
+                break;
+            case 'setup_masterslider':
+                text = "Import slider ( about 2 minutes) ...";
+                break;
+        }
+        jQuery('.close-import').text(text);
+    }
+
+    function doProcess(data){
+                jQuery.post(ajaxurl, data, function(response) {
+                try{
+                    var result = JSON.parse(response);
+                    var percenResult = parseFloat(result.percent);
+                    var percen = (percenResult*100).toFixed(2);
+                    if (percen == '100.00' || result.is_done_setting_pages) { percen = 99.99;}
+                    jQuery('#beau-percen-text').text(percen+'%');
+                    jQuery('.beau-process-bar').css('width',percen+'%');
+                } catch(e){
+                    // Response is not JSON => Problem
+                    // resultFinal();
+                    jQuery('.beau-message').text('Import error please refresh page and import again or contact Beautheme Team');
+                    jQuery('.result-title').append('<p class = "notice notice-error">'+e+'</p>');
+                }
+
+                if(result.completed == 1){
+                    resultFinal();
+                    return;
+                }
+                /* If complete totally */
+                data.current_process = 'posts_content';
+                /* If complete import posts */
+                if(result.is_done_posts == '1') {
+                    data.current_process = 'setting_page';
+                    doProcess(data);
+                } else if(result.is_done_setting_pages){
+                    data.current_process = 'setup_masterslider';
+                    doProcess(data);
+                } else {
+                    data.fetch_attachments = true;
+                    data.last_import_key = result.last_import_key;
+                    data.is_done_posts = result.is_done_posts;
+                    data.wbc_import = 're-importing';
+                    doProcess(data);
+                }
+                if(result.errors) {
+                    for(var i=0; i< result.errors.length; i++){
+                        jQuery('.result-title').append('<p class = "notice notice-error">'+result.errors[i]+'</p>');
+                    }
+                }
+                showCurrentProcess(data.current_process);
+                // console.log(result);
+            });
+    }
+    // Remove screen
+    jQuery('body').on('click', '.close-import', function(){
+        if ($(this).hasClass('active')) {
+            $('.beau-percen-screen').removeClass('active');
+            $('.beau-percen-screen').delay(1000).remove();
+        }
+        return false;
+    });
+})(jQuery);

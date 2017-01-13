@@ -1,0 +1,178 @@
+.f-home1{
+    padding-top:150px;
+    .btn-default{
+        left:-25px;
+    }
+    .ft-subcri2 {
+        .control-form{
+            @include MQ(L){
+                width: 300px;
+            }
+            @include OP(MS){
+                width:240px!important;
+            }
+            @include MIN(MM){
+                width:230px !important;
+            }
+        }
+    }
+
+}
+footer{
+    font-family: $bd-b;
+    font-size: $body-size;
+    float: left;
+    width: 100%;
+    height: auto;
+    .top-footer{
+        padding-bottom:150px;
+        //cover footer
+        .cover-item{
+            .centertxt{
+                padding: 5px 110px;
+                .title-bold-white{
+                    padding:12px 0;
+                }
+            }
+            .white-desc{
+                line-height:1.6em;
+            }
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+    .bottom-footer{
+        float: left;
+        width: 100%;
+        margin: 100px 0 0px 0;
+        @include RP(AM){
+            margin: 50px 0 0 0;
+        }
+        .copyright{
+            float:right;
+            font-size:12px;
+            color: $black_04;
+            a{
+                color: $black_04;
+            }
+        }
+    }
+}
+.subcribe{
+    .ft-subcri2{
+        @include MQ(L){
+            width:27%;
+        }
+        @include OP(MS){
+            width:38%;
+        }
+        @include RP(S){
+            padding: 0px;
+        }
+        margin:0 auto;
+        padding:10px 0;
+        input{
+            &::-webkit-input-placeholder {
+                   letter-spacing:2px;
+                   width:100%;
+
+            }
+        }
+    }
+}
+
+// box sub
+
+.ft-subcri2{
+    padding:10px 65px;
+    border:1px solid $black_01;
+    -webkit-transition: background-color 0.5s ease;
+    -moz-transition: background-color 0.5s ease;
+    transition: background-color 0.5s ease;
+    #beau-subcribe{
+        padding:5px 0;
+        display:inline-flex;
+    }
+    .control-form{
+       @include MQ(M){
+            width:340px;
+       }
+
+       @include RP(AM){
+            width:250px;
+       }
+         border:none;
+        text-align:center;
+        color:$black_04;
+        letter-spacing: 2px;
+        background:transparent;
+        box-shadow: none;
+        line-height: 25px;
+        @include RP(MBL){
+            line-height:22px;
+        }
+        &:focus{
+            border:none;
+            box-shadow:none;
+            outline:0;
+            background:transparent;
+        }
+        &:active{
+            border:none;
+            box-shadow:none;
+            outline:0;
+        }
+        &::-webkit-input-placeholder {
+            color:$black_05;
+            letter-spacing: 5px;
+            @include RP(AM){
+                font-size: 12px;
+                letter-spacing: 3px;
+            }
+            font-family: $bd-b;
+            font-size: 14px;
+             @include MQ(L){
+                display:none;
+            }
+            @include RP(MBL){
+                font-size:10px ;
+            }
+        }
+    }
+    .btn-default{
+        background:transparent;
+        position:relative;
+        border:none;
+        @include MQ(MB){
+            left:-20px;
+        }
+        z-index:1;
+        // top:-2px;
+         @include RP(MBL){
+            padding-left:0;
+            left:-10px;
+        }
+    }
+    &:hover{
+       background-color:$Black;
+        .control-form, .btn-default{
+            color:$White;
+        }
+        .control-form{
+            &::-webkit-input-placeholder{
+                color:$White;
+            }
+            &:active::-webkit-input-placeholder,  &:focus::-webkit-input-placeholder{
+                color:$white_04;
+            }
+        }
+    }
+}
+/*footer*/
+.text-copyright{
+    font-size:14px;
+    font-family:$bd-r;
+}
+/*end footer*/

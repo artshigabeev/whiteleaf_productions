@@ -1,0 +1,120 @@
+body{
+    font-family: $bd-b;
+    font-size: $body-size;
+    overflow-x:hidden!important;
+    //position: relative;
+    color:$black_05;
+
+}
+.pagination{
+    width:100%;
+    text-align: center;
+}
+ul, ol{
+    padding:0;
+    margin:0;
+}
+
+
+a{text-decoration:none !important;}
+
+.notes{
+    font-family: $bd-r;
+    line-height: 1.5em;
+    color:$black_05;
+}
+
+.fl-title-small2{
+    @include font-size(14px);
+    letter-spacing: 8px;
+}
+.vision-box2{
+    margin:45px 0;
+    @include RP(AM){
+        margin:10px 0;
+    }
+}
+.header-fl-blog{
+    padding:30px 0;
+}
+.d-bottom2{}
+.bg-header-blog{
+    background:transparent;
+}
+
+
+.dff-container{
+    background:$black_01;
+    text-align: center;
+    padding:85px 0;
+    @include OP(MS){
+        padding: 30px 0;
+    }
+    @include RP(AM){
+        padding: 20px 0;
+    }
+    .dff-text{
+        font-family: $fr;
+        font-weight: 900;
+        color:$Black;
+        @include font-size(40px);
+        @include RP(AM){
+            @include font-size(25px);
+        }
+    }
+    .view-more {
+        position:relative;
+        @include MQ(M){
+            top:-9px;
+            left:35px;
+        }
+        @include RP(AM){
+            left:5px;
+            top:-5px;
+        }
+        @include transition('slow');
+        a{
+            @include font-size(10px);
+            @include MQ(M){
+                height:40px;
+                line-height: 40px;
+            }
+        }
+        &:hover{
+            background:$Black;
+            a{
+                color:$White;
+            }
+        }
+    }
+}
+.not-found-data{
+    padding:20px 0;
+    font-size:20px;
+    text-align:center;
+    width:100%;
+}
+
+.not-search-form{
+    width:200px;
+    padding:5px 10px;
+    border:1px solid $black_02;
+    margin:0 auto;
+    border-radius:20px;
+    .s-input{
+        border:none;
+        &:hover, &:focus{
+            outline: none;
+        }
+        &:-webkit-placeholder, &:-moz-placeholder{
+            font-size: 14px;
+        }
+
+    }
+}
+// DEFAULT
+.container-box, .content-post, .comment-message{
+    ul,ol{
+        padding-left:30px;
+    }
+}

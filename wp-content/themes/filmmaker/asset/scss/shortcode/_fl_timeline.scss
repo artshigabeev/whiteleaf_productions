@@ -1,0 +1,368 @@
+/*
+    ======== Style timeline provincial ==============
+*/
+#cd-timeline {
+    @include RP(AM){
+        padding: 0 15px;
+    }
+    position: relative;
+    padding: 2em 0;
+    &::before {
+        /* this is the vertical line */
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 18px;
+        height: 100%;
+        width: 4px;
+    }
+
+    @include MQ(L) {
+        &::before {
+            left: 50%;
+            margin-left: -2px;
+        }
+    }
+}
+
+.cd-timeline-block {
+    position: relative;
+
+    @include clearfix;
+    &:before{
+        position:absolute;
+        width:1px;
+        height:100%;
+        left:50.1%;
+        @include RP(AM){
+            left:0;
+        }
+        background:$black_01;
+        content:"";
+    }
+}
+
+.cd-timeline-block:last-child{
+    &:before{
+        background:none;
+    }
+}
+.cd-date{
+    @include font-size(50px);
+    color:$black_02;
+    font-style: italic;
+    position:relative;
+    @include RP(AM){
+        @include font-size(30px);
+    }
+
+}
+.cd-title{
+    @include font-size(30px);
+     @include RP(AM){
+        @include font-size(20px);
+    }
+    color:$Black;
+    font-weight:700;
+    margin:5px 0 10px 0;
+}
+.cd-desc{
+    font-family: $bd-r;
+    @include font-size(16px);
+    color:$black_05;
+    line-height:1.5em;
+     @include RP(AM){
+        @include font-size(13px);
+    }
+}
+.cd-timeline-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+   background: $Black;
+     left: 50.1%;
+     @include RP(AM){
+        left:0.5px;
+     }
+    margin-left:-2.5px;
+    outline: 3px solid $White;
+    /* Force Hardware Acceleration in WebKit */
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+}
+
+.cd-timeline-content {
+    position: relative;
+    margin-left: 60px;
+    font-family: $fr;
+    margin-left: 0;
+    width: 45%;
+    @include RP(AM){
+        width:100%;
+        padding-left:20px;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        top: 16px;
+        right: 100%;
+        height: 0;
+        width: 0;
+        border: 7px solid transparent;
+    }
+    .cd-timeline-block:nth-child(odd) & {
+        @include MQ(M){
+            float: right;
+        }
+        top:-43px;
+
+        @include RP(AM){
+            top:-22px;
+        }
+    }
+    .cd-timeline-block:nth-child(even) & {
+        @include MQ(M){
+            text-align:right;
+        }
+       position:relative;
+       top:-43px;
+        @include RP(AM){
+            top:-22px;
+        }
+    }
+}
+/*
+ ============== Time line thunderstorm ===========
+*/
+
+ #timeline {
+        overflow:hidden;
+        width: 100%;
+        @include MQ(M){
+            height: 610px;
+        }
+        @include OP(MBS){
+            height:650px;
+        }
+        @include RP(MBL){
+            height:550px;
+        };
+        padding:5px 0;
+        position: relative;
+        &:before{
+            @include MQ(M){
+                position:absolute;
+                height:100%;
+                background: $black_02;
+                content:"";
+                width:1px;
+                left:7px;
+            }
+        }
+    }
+#dates {
+    width: 10%;
+    height: 600px;
+    float: left;
+    @include RP(AM){
+        display: none;
+    }
+
+}
+#dates li {
+    list-style: none;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    position:relative;
+   @include  font-size(12px);
+    padding-left: 10px;
+
+}
+#dates a {
+    font-family: $bd-b;
+    color:$black_02;
+    position:relative;
+    letter-spacing: 3px;
+    padding-left:10px;
+     &:before{
+         content:"";
+         position:absolute;
+         width:7px;
+         height:7px;
+        background:#ebebeb;
+        left:-6px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        top:6px;
+        outline: 4px solid $White;
+    }
+}
+#dates .selected {
+    color:$Black;
+    &:before{
+        background:$Black;
+    }
+}
+
+#issues {
+    width: 90%;
+    @include MQ(M){
+        height: 600px;
+    }
+    float: left;
+    padding:70px 0;
+    @include RP(AM){
+        width:100%;
+        height:auto;
+    }
+}
+#issues li {
+    width: 100%;
+    height: 600px;
+    list-style: none;
+
+}
+#issues li.selected img {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}
+#issues li img {
+
+    zoom: 1;
+    -webkit-transition: all 1.5s ease-in-out;
+    -moz-transition: all 1.5s ease-in-out;
+    -o-transition: all 1.5s ease-in-out;
+    -ms-transition: all 1.5s ease-in-out;
+    transition: all 1.5s ease-in-out;
+    -webkit-transform: scale(0.8,0.8);
+    -moz-transform: scale(0.8,0.8);
+    -o-transform: scale(0.8,0.8);
+    -ms-transform: scale(0.8,0.8);
+    transform: scale(0.8,0.8);
+    width:100%;
+    height:auto;
+}
+#issues li .date-group {
+    color: $Black;
+    @include font-size(60px);
+    text-align: center;
+    font-family: $fr;
+    font-weight: 700;
+    @include MQ(M){
+        top: -45px;
+        position: relative;
+    }
+    @include RP(AM){
+        @include font-size(30px);
+        margin-top:15px;
+    }
+
+}
+    #issues li .sl-time-desc {
+        font-family: $bd-r;
+        text-align:center;
+        color:$black_05;
+        line-height:1.6em;
+        @include MQ(M){
+            margin: -30px 20px 20px 20px;
+        }
+        @include RP(AM){
+            @include font-size(13px);
+            margin:15px 0 0 0;
+        }
+    }
+
+#disnext,
+#disprev {
+    position: absolute;
+    @include center(x);
+    @include MQ(M){
+        left:55%;
+    }
+    font-size: 70px;
+    width: 38px;
+    height: 22px;
+    overflow: hidden;
+}
+#disnext:hover, #disprev:hover {
+    background-position:  0 0;
+}
+  #disnext {
+        bottom: 0;
+        @include RP(AM){
+            bottom:50px;
+        }
+        background-image: url('../images/icons/next_v.png');
+    }
+    #disprev {
+        top: 20px;
+        background-image: url('../images/icons/prev_v.png');
+    }
+        #disnext.disabled,
+        #disprev.disabled {
+            opacity: 0.2;
+        }
+/*Origin*/
+.overview{
+    @include MQ(M){
+        margin-bottom:110px;
+    }
+    @include RP(AM){
+        margin-bottom: 30px;
+    }
+}
+.discover-page{
+    margin-top:150px;
+}
+.discover-page-content {
+  text-align: center;
+  padding:70px 50px 0 50px;
+  @include RP(AM){
+    padding: 0 15px;
+  }
+}
+
+.discover-page-group {
+  color: $black_05;
+  @include RP(AM){
+    @include font-size(13px);
+    letter-spacing: 3px;
+  }
+  letter-spacing: 8px;
+}
+
+.discover-page-name {
+  color: #000;
+  @include MQ(M){
+    @include font-size(70px);
+  }
+  @include RP(AM){
+    @include font-size(30px);
+  }
+  font-family: $fr;
+  font-weight: 700;
+  margin-top: -5px;
+}
+
+.discover-page-desc {
+  font-family: "pb-regular";
+  color: $black_05;
+  line-height: 1.7em;
+  margin: 20px 0 0px 0;
+  @include RP(AM){
+    @include font-size(14px);
+    line-height: 1.5em;
+  }
+}
+
+.discover-signer {
+  padding-left: 15%;
+}

@@ -1,0 +1,208 @@
+/*=======form-contact2=====*/
+#form-contact2{
+    background:#111111;
+    width:100%;
+    height:1000px;
+    @include OP(TBM){
+        height:800px;
+    }
+    @include OP(TBMS){
+        height:800px;
+    }
+    @include RP(AM){
+        background: transparent;
+    }
+    .fl-row{
+        @include OP(TBM){
+            padding: 0 230px;
+        }
+        @include OP(TBMS){
+            padding:0 150px;
+        }
+    }
+    .ct_form{
+        margin-top:0;
+    }
+    ul.list-social{
+        @include OP(MS){
+            margin:0;
+        }
+        @include RP(AM){
+            margin:0 !important;
+        }
+    }
+    .form{
+        @include RP(AM){
+            width: 100%;
+        }
+        .white-desc{
+            line-height:1.4;
+        }
+        .list-social{
+            span{
+                a{
+                    font-size:16px;
+                    padding:0;
+                }
+                width: 30px;
+                height: 30px;
+                background: $white_04;
+                display: inline-block;
+                text-align: center;
+                border-radius: 50%;
+                padding-top: 4px;
+                margin-right: 8px;
+            }
+        }
+        position:absolute;
+        @include center(xy);
+        text-align:center;
+        .address-info{
+            line-height:20px;
+            @include OP(MS){
+                padding:0 30px;
+            }
+        }
+        .title-white{
+            color:$White;
+            margin-bottom:20px;
+            @include RP(AM){
+                color: $Black;
+            }
+            //line-height:20px;
+        }
+        .info{
+            margin:0 auto;
+            i{
+                color:$white_04;
+            }
+        }
+        ul{list-style:none;}
+        a{
+            color: $white_02;
+            &:hover{
+                color: $White;
+            }
+        }
+        .form-1{
+            display:table;
+            margin: 20px 15%;
+            .form-group{
+                padding:0;
+                &:first-child{
+                    padding:0 10px 0 0;
+                }
+                &:nth-child(2){
+                    padding:0 0 0 10px;
+                }
+                .text-area{
+                    color:$White;
+                    width:100%;
+                    height:150px;
+                    @include OP(TBMM){
+                        height:100px;
+                    }
+                    background:none;
+                    border-color:$white_02;
+                    line-height:20px;
+                    &::-webkit-input-placeholder {
+                       color: $white_05;
+                       //padding-top:20px;
+                    }
+                    &::-moz-placeholder {  /* Firefox 19+ */
+                       color: $white_05;
+                       //padding-top:20px;
+                    }
+                    &:hover,&:focus{
+                        border-color:$White;
+                        outline: 0;
+                    }
+                }
+                .form-control{
+                    border-color:$white_02;
+                    &:hover,&:focus{
+                        border-color:$White;
+                        outline: 0;
+                    }
+                    &::-webkit-input-placeholder {
+                       color: $white_05;
+                    }
+                    &::-moz-placeholder {  /* Firefox 19+ */
+                       color: $white_05;
+                    }
+                    color:$White;
+                    border-radius: 0;
+                    background:none;
+                    height:42px;
+                    padding-bottom:12px;
+                    padding:9px 20px;
+                }
+            }
+            .submit-contact{
+                padding:10px 0 9px 0;
+                @include RP(AM){
+                    padding:5px 0;
+                }
+                background:$White;
+                color:$Black;
+                a{
+                    color:$Black;
+                }
+                .btn-icon{
+                    background:none;
+                    border:none;
+                }
+            }
+        }
+    }
+}
+.flim_mapview{
+         @include OP(TBM){
+        height:800px;
+        overflow: hidden;
+        }
+        @include OP(TBMS){
+            height:800px;
+        }
+
+    }
+.mapview1{
+    @include RP(AM){
+        display: none;
+    }
+}
+#addres{
+    @extend #form-contact;
+    width:100%;
+    height:100%;
+    background:$black_09;
+    position: absolute;
+    top:0;
+    .form{
+        .title-white{
+            margin-bottom:10px;
+        }
+        .white-desc{
+            font-weight:700;
+            font-size:16px;
+        }
+    }
+    .item-add{
+        padding:30px 0;
+    }
+}
+.show-hide2{
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 12px;
+    position: absolute;
+    top: 6%;
+    z-index: 1;
+    right: 0;
+    width: 140px;
+    height: 40px;
+    background: #fff;
+}
+/*=====end contact-2====*/

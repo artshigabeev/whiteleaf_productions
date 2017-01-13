@@ -1,0 +1,50 @@
+.fl-menu-blog{
+    padding-top:20px;
+    .navbar-right{
+        li{
+            display:inline-block;
+            font-size:12px;
+            a{
+                font-family:$bd-b;
+                text-transform: uppercase;
+                font-size: 14px;
+                padding:0 30px;
+                &:hover{
+                    background:none;
+                }
+            }
+            select{
+                border:0;
+                outline: none;
+                background:transparent;
+            }
+        }
+    }
+    .nav-color{
+        a{
+            color:$black_05;
+            &:hover{
+                color:$Black;
+            }
+        }
+    }
+    .nav-color2{
+        a{
+            color:$white_05;
+            &:hover{
+                color:$White;
+            }
+        }
+         select{
+            color:$white_05;
+         }
+    }
+}
+.stick-scroll{
+    position:fixed !important;
+    top:0;
+    width:100%;
+    // background:$Black;
+    @include transition('slow');
+
+}

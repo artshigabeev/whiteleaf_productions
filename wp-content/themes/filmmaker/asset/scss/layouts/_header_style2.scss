@@ -1,0 +1,178 @@
+/*= header 02=*/
+.navbar-brand{
+    padding:0 15px;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    margin: auto;
+    top:30px;
+    height:0;
+    .logo-in-black,.logo-in-white{
+        height:0;
+    }
+    img{
+        vertical-align: middle;
+    }
+}
+
+
+
+
+/* end header */
+.top-header{
+    position:relative;
+    .menu-style2{
+        padding-top:35px;
+        @include RP(BD){
+            width:200px;
+            position:fixed;
+            right:-100%;
+            background:$White;
+            height:100vh;
+            z-index:11;
+            overflow-x: hidden;
+            -webkit-transition: right 0.7s ease;
+            -moz-transition: right 0.7s ease;
+            transition: right 0.7s ease;
+        }
+    }
+    .active-pro{
+        right:0 !important;
+        -webkit-transition: right 0.5s ease;
+        -moz-transition: right 0.5s ease;
+        transition: right 0.5s ease;
+    }
+    #logo{
+        position:absolute;
+        @include center(xy);
+    }
+    ul.active-menu-type2{
+        li{
+            @include RP(BD){
+                width: 100%;
+            }
+            list-style:none;
+            display:inline-block;
+            padding:0 5px;
+            position:relative;
+            a{
+                height:50px;
+                line-height: 50px;
+                @include RP(BD){
+                    line-height: 35px;
+                }
+                border-left:2px solid transparent;
+                border-right:2px solid transparent;
+                padding:0 20px;
+                text-transform: uppercase;
+                @include font-size(12px);
+                &:hover{
+                    border-left:2px solid $White;
+                    border-right:2px solid $White;
+                }
+                @include RP(BD){
+                    color: $Black;
+                }
+            }
+            i{
+                font-size: 16px;
+                color:$black_05;
+                position:absolute;
+                right:30px;
+                top:10px;
+                &:hover, &:active, &:focus{
+                    color:$Black;
+                }
+            }
+            &:hover{
+                ul{
+
+                    @include MQ(BD){
+                        display:block;
+                    }
+                }
+            }
+            ul{
+                display:none;
+                position:absolute;
+                @include center(x);
+                background:$White;
+                width:200px;
+                z-index:5;
+                -webkit-box-shadow: 0px 8px 30px 0px rgba(0, 0, 0, 0.20);
+                -moz-box-shadow: 0px 8px 30px 0px rgba(0, 0, 0, 0.20);
+                box-shadow: 0px 8px 30px 0px rgba(0, 0, 0, 0.20);
+                padding:10px 0 30px 0;
+                @include RP(BD){
+                    position:inherit;
+                    box-shadow:none;
+                    transform: none;
+                    left:0;
+                    padding:0;
+                    width:100%;
+                }
+                li{
+                    width:100%;
+                    text-align:center;
+                    @include RP(BD){
+                        text-align: left;
+                    }
+                    height:40px;
+                    line-height: 40px;
+                    list-style:none;
+                    a{
+                        color:$black_05;
+                    }
+                    &:hover{
+                        a{
+                            color:$Black;
+                        }
+                        ul{
+
+                            @include MQ(AD){
+                               display:block !important;
+                            }
+                        }
+                    }
+                    ul{
+                        @include MQ(AD){
+                            left:300px;
+                            display:none !important;
+                            top:0;
+                            padding:0;
+                            li{
+                                a{
+                                    color:$black_05;
+                                }
+                                &:hover{
+                                    a{
+                                        color:$Black;
+                                    }
+                                }
+                            }
+                        }
+                       @include RP(BD){
+                            top:-10px;
+                            left:15px;
+                       }
+                    }
+                }
+            }
+        }
+    }
+    ul.fl-menu-left{
+        float:left;
+        @include RP(BD){
+            float:none;
+        }
+    }
+    ul.fl-menu-right{
+        float:right;
+        margin-right:30px;
+        @include RP(BD){
+            float:none;
+            margin-right:0;
+        }
+    }
+}

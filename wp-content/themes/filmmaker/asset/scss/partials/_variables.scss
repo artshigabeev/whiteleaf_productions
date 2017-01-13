@@ -1,0 +1,70 @@
+//Setting
+$import : false;
+$content-size: 1170px;
+$default_padding: 0px;
+$nav-height: 80px;
+$base-line: 22px;
+$margin-base: 100px;
+
+
+// colors
+$current-color: #262626; // Base color
+$active-color: #f07c29;  // Active color
+$Black: #000;
+$White: #fff;
+
+
+//Color opacity
+
+$black_005: rgba(0,0,0, 0.05);
+$black_01: rgba(0,0,0, 0.1);
+$black_02: rgba(0,0,0, 0.2);
+$black_03: rgba(0,0,0, 0.3);
+$black_04: rgba(0,0,0, 0.4);
+$black_05: rgba(0,0,0, 0.5);
+$black_06: rgba(0,0,0, 0.6);
+$black_07: rgba(0,0,0, 0.7);
+$black_08: rgba(0,0,0, 0.8);
+$black_09: rgba(0,0,0, 0.9);
+
+
+$white_01: rgba(255,255,255, 0.1);
+$white_02: rgba(255,255,255, 0.2);
+$white_03: rgba(255,255,255, 0.3);
+$white_04: rgba(255,255,255, 0.4);
+$white_05: rgba(255,255,255, 0.5);
+$white_06: rgba(255,255,255, 0.6);
+$white_07: rgba(255,255,255, 0.7);
+$white_08: rgba(255,255,255, 0.8);
+$white_09: rgba(255,255,255, 0.9);
+
+
+
+// fonts
+$Aw: 'FontAwesome';
+$Ti: 'Times New Roman';
+$La: 'Lato', sans-serif;
+$Me: 'Merriweather', serif;
+$Co-l: 'Conv_BodEgyPro-Light';
+$Co-r: 'Conv_BodEgyPro-Reg';
+$Co-b: 'Conv_BodEgyPro-Bold';
+$Co-li: 'Conv_BodEgyPro-LightIta';
+$Fr-b: 'Playfair Display', serif;
+
+
+
+
+$Bold: bold;
+$Heavy: 700;
+$Light: 300;
+
+//Font size
+$body-size: 16px;
+
+// z-index
+$bg-zindex: 0;
+$content-zindex: 1;
+$nav-zindex: 2;
+$header-zindex: 3;
+$slide-zindex: 4;
+$button-zindex:5;

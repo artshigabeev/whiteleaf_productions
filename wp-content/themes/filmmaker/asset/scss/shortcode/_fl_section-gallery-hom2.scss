@@ -1,0 +1,44 @@
+.list{
+    padding:0;
+    list-style:none;
+    float:left;
+    width: 100%;
+    img{
+        position: absolute;
+        width:100%;
+        min-height:100%;
+
+        @include center(xy);
+    }
+    .list-item{
+        padding:0;
+        box-sizing: border-box;
+            overflow: hidden;
+        .image{
+            height:200px;
+            img{
+                height: auto;
+                width: 100%;
+                min-height: 100%;
+            }
+        }
+        .image2{
+            height:400px;
+            img{
+                height: 400px;
+                min-width: auto;
+                width: auto;
+            }
+        }
+        .image3{
+            height:400px;
+            img{
+                width:100%;
+                height:auto;
+            }
+        }
+    }
+}
+.list2{
+    background:$Black;
+}

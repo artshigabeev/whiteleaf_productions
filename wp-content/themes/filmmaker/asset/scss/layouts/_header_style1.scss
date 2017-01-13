@@ -1,0 +1,516 @@
+/*= header =*/
+header{
+    height:120px;
+    position:relative;
+    z-index:3;
+}
+.header-black {
+    .toggle-nav{
+        color:$black_05 !important;
+        &:hover, &:active, &:focus{
+            color:$Black !important;
+        }
+    }
+}
+.fl-main-menu{
+    position:relative;
+    display:block;
+    .slide-flim{
+        position:relative;
+        margin-top:-120px;
+        img{
+            // width:auto;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            // height: 100vh;
+        }
+    }
+
+}
+
+.menu-default{
+    width:100%;
+    display:table;
+    height:120px;
+    position:relative;
+    @include RP(AM){
+        padding: 0 15px;
+    }
+    #logo{
+        float:left;
+        width:auto;
+        line-height: 120px;
+        position:relative;
+        z-index:10;
+        @include RP(AM){
+            z-index: 8;
+        }
+    }
+    #primary_nav_wrap{
+        float:right;
+    }
+    .close-menu{
+        display:none;
+        position:fixed;
+        z-index: 15;
+        top:40px;
+        right:-100%;
+        text-align:center;
+        color:$white_05;
+        font-size: 20px;
+        cursor: pointer;
+    }
+}
+.menu-olay{
+    display:none;
+    width:100%;
+    position:absolute;
+    height:100vh;
+    z-index:11;
+    background:$black_07;
+    position:fixed;
+}
+#primary_nav_wrap{
+    @include RP(BD){
+        position:relative;
+    }
+    ul.active-pro{
+        right:0 !important;
+        transition: right 0.7s;
+        -webkit-transition: right 0.7s;
+        -moz-transition: right 0.7s;
+    }
+    ul.active-menu-default{
+        @include RP(BD){
+            right:-100%;
+            width:220px;
+            background:$White;
+            height:100vh;
+            z-index:12;
+            position:fixed;
+            text-align:left;
+            padding:20px 20px 30px 20px;
+            overflow-x: hidden;
+            transition: right 0.5s;
+            -webkit-transition: right 0.5s;
+            -moz-transition: right 0.5s;
+        }
+        float:right;
+        padding-right:25px;
+        >li{
+            display:inline-block;
+            position:relative;
+            margin:0;
+            padding: 15px 12px;
+            list-style:none;
+            @include RP(BD){
+                width:100%;
+                margin-bottom:10px;
+                padding:0;
+                left:15px;
+            }
+
+            a{
+                padding:5px 15px;
+                border-left: 2px solid transparent;
+                border-right: 2px solid transparent;
+                font-size: 12px;
+                text-transform: uppercase;
+                &:hover,&:focus,&:active{
+                    border-left: 2px solid $White;
+                    border-right: 2px solid $White;
+                    background:none;
+                }
+                @include RP(BD){
+                    color:$Black;
+                    padding:0;
+                    font-size: 11px;
+                }
+            }
+            &:hover{
+                ul{
+                    display:block;
+                }
+            }
+        }
+        ul{
+            position:absolute;
+            @include center(x);
+            display:none;
+            background:$White;
+            width:200px;
+            padding:0 0 20px 0;
+            top:100%;
+            @include RP(BD){
+                padding: 0;
+            }
+            z-index:3;
+            @include RP(BD){
+                position: inherit;
+                display: block;
+                width:100%;
+            }
+            li{
+                width:100%;
+                text-align: center;
+                padding:10px 0 0 5px;
+                list-style:none;
+                position:relative;
+                @include RP(BD){
+                    text-align: left;
+                    padding:5px 0 0 0 ;
+                    margin-bottom:0;
+                }
+                a{
+                    display:block;
+                   @include RP(BD){
+                        color:$black_05 !important;
+
+                   }
+                }
+                &:hover{
+                    ul{
+                        display:block !important;
+                        left:300px;
+                        @include RP(BD){
+                            left:90px;
+                        }
+                    }
+                    >a{
+                        color:$Black;
+                    }
+                }
+                 ul{
+                    top:0;
+                    left:0;
+                    display:none !important;
+                    padding:0 0 10px 0;
+                    @include RP(BD){
+                        position: relative;
+                        display:block !important;
+                        left:90px;
+                        padding:0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include RP(BD){
+    .toggle-nav{
+        position:absolute;
+        right:0;
+        line-height: 60px;
+        color:$white_05 !important;
+        @include RP(BM){
+            right: 15px;
+        }
+        @include RP(AM){
+            right:5px;
+        }
+        &:hover, &:active{
+            color:$White !important;
+        }
+        line-height: 120px;
+    }
+}
+/*End menu responsive*/
+.header-white{
+    .menu {
+        ul {
+            li{
+
+                a{
+                    color:$white_07;
+                    @include RP(BD){
+                        color:$black_05;
+                    }
+                    &:hover{
+                        color:$White;
+                    }
+                }
+            }
+            .sub-menu{
+                -webkit-box-shadow: 0px 8px 30px 0px rgba(0, 0, 0, 0.20);
+                -moz-box-shadow: 0px 8px 30px 0px rgba(0, 0, 0, 0.20);
+                box-shadow: 0px 8px 30px 0px rgba(0, 0, 0, 0.20);
+                @include RP(BD){
+                    box-shadow:none;
+                }
+                padding-bottom:10px !important;
+                li a{
+                    color:$black_05 !important;
+                    &:hover{
+                        color:$Black !important;
+                    }
+                }
+            }
+        }
+    }
+    #logo {
+        .logo-in-black{
+            display:none;
+        }
+        .logo-in-white{
+            display:block;
+        }
+    }
+}
+#logo{z-index:9999}
+.header-black{
+    #primary_nav_wrap ul li{
+        a{
+            color:$black_05;
+            &:hover{
+                color:$Black;
+            }
+            @include RP(BD){
+                color:$black_09;
+            }
+        }
+        &:hover{
+            .sub-menu{
+                -webkit-box-shadow: 0px 8px 30px 0px rgba(0, 0, 0, 0.20);
+                -moz-box-shadow: 0px 8px 30px 0px rgba(0, 0, 0, 0.20);
+                box-shadow: 0px 8px 30px 0px rgba(0, 0, 0, 0.20);
+                @include RP(BD){
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+    #logo{
+        .logo-in-black{
+            display:block;
+        }
+        .logo-in-white{
+            display:none;
+        }
+    }
+    .searchbox-humber{
+        .sb-icon-search{
+            color:$black_07;
+        }
+    }
+    .searchbox{
+        .sb-icon-search{
+            color:$black_07;
+            cursor: pointer;
+            pointer-events: auto;
+        }
+    }
+}
+.sb-search-open{
+    .sb-icon-search{
+        color:$white_07 !important;
+    }
+    .fl-close{display:block !important}
+}
+
+/* ======= Search =======*/
+.bg-fl-search{
+    -webkit-transition: width 0.5s;
+    -moz-transition: width 0.5s;
+    transition: width 0.5s;
+    width:0;
+    float:right;
+    position:absolute;
+    right:0;
+    z-index:9;
+
+}
+.fl-search-active{
+    width:100%;
+    height:121px;
+    background:$Black;
+     -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    .fl-close{
+        opacity:1;
+    }
+}
+.searchbox{
+    position: relative;
+    .fl-search {
+        position: absolute;
+        right: 0px;
+        top: 17px;
+        @include RP(BD){
+            right:30px;
+            top:50px;
+        }
+    }
+    .sb-search-input {
+        border: none;
+        outline: none;
+        display:none;
+        height: 40px;
+        margin: 0;
+        z-index: 10;
+        padding: 0px 40px 20px 20px;
+        font-family: $bd-r;
+        font-size: 16px;
+        color: $white_05;
+        background:transparent;
+
+    }
+     .sb-search-input  {
+        position: absolute;
+        right: 40px;
+        -webkit-transition: width 0.7s ease-in-out;
+        -moz-transition: width 0.7s ease-in-out;
+        transition: width 0.7s ease-in-out;
+    }
+    .sb-search-submit {
+
+        color: transparent;
+        border: none;
+        outline: none;
+        z-index: -1;
+       // background:transparent;
+    }
+
+    .sb-icon-search {
+        color: $white_06;
+        z-index: 9;
+        //font-size: 16px;
+        background:transparent;
+       //margin-top:4px;
+    }
+
+
+
+    /* Open state */
+    .fl-search.sb-search-open,
+    .no-js .sb-search {
+        width: 100%;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+        background:$Black;
+    }
+    .fl-search.sb-search-open {
+        .sb-search-input{
+        display:block;
+        }
+        .fl-close{
+            opacity:1;
+        }
+        .sb-icon-search,.sb-search-submit{
+            right: 12px;
+            position: absolute;
+            padding-right: 12px;
+            border-right: 1px solid $white_02;
+        }
+    }
+
+    .fl-close{
+        position:absolute;
+        color:$white_05;
+        opacity: 0;
+        @include font-size(30px);
+        cursor: pointer;
+        font-family: $bd-r;
+        z-index:9;
+        right: -14px;
+        top:-14px;
+    }
+
+}
+
+//humber search
+.searchbox-humber{
+    .fl-search {
+    position: absolute;
+    right: 80px;
+    top: 50px;
+
+    }
+    .sb-search-input {
+        border: none;
+        outline: none;
+        display:none;
+        height: 40px;
+        margin: 0;
+        z-index: 10;
+        padding: 8px 40px 20px 20px;
+        font-family: $bd-r;
+        font-size: 16px;
+        color: $white_05;
+        background:transparent;
+
+    }
+    .sb-icon-search,
+    .sb-search-submit{
+        display: block;
+        position: absolute;
+        cursor: pointer;
+        -webkit-transition: width 0.7s ease-in-out;
+        -moz-transition: width 0.7s ease-in-out;
+        transition: width 0.7s ease-in-out;
+    }
+     .sb-search-input  {
+        position: absolute;
+        right: 40px;
+        -webkit-transition: width 0.7s ease-in-out;
+        -moz-transition: width 0.7s ease-in-out;
+        transition: width 0.7s ease-in-out;
+    }
+    .sb-search-submit {
+
+        color: transparent;
+        border: none;
+        outline: none;
+        z-index: -1;
+       // background:transparent;
+    }
+
+    .sb-icon-search {
+        color: #fff;
+        z-index: 90;
+        //font-size: 16px;
+        background:transparent;
+       //margin-top:4px;
+    }
+
+    /* Open state */
+    .fl-search.sb-search-open,
+    .no-js .sb-search {
+        width: 100%;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+        background:$Black;
+    }
+    .fl-search.sb-search-open {
+        .sb-search-input{
+        display:block;
+        }
+        .fl-close{
+            opacity:1;
+        }
+        .sb-icon-search,.sb-search-submit{
+            right: 12px;
+            position: absolute;
+            padding-right: 12px;
+            border-right: 1px solid $white_02;
+        }
+    }
+
+    .fl-close{
+        display:none;
+        position:absolute;
+        color:$white_05;
+        opacity: 0;
+        @include font-size(30px);
+        cursor: pointer;
+        font-family: $bd-r;
+        z-index:9;
+        right: -12px;
+        top:-14px;
+    }
+}
+/** menu style2**/

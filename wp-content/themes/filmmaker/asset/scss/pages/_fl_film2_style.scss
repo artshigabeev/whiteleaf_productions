@@ -1,0 +1,327 @@
+.film-type2{
+    margin-top:150px;
+    width:100%;
+    display:table;
+    position:relative;
+    ul{
+        width:100%;
+        display:table;
+        li{
+            text-align:center;
+            list-style:none;
+            @include MQ(M){
+                width:50%;
+            }
+            /*wdth:1400*/
+            @include MQ(LG){
+                &:first-child{
+                    padding-top:135px !important;
+                }
+                &:nth-child(3){
+                    margin-top:150px !important;
+                }
+
+                 &:nth-child(5){
+                    margin-top:150px !important;
+                 }
+                  &:nth-child(7){
+                     margin:150px 0 0 0 !important;
+                }
+                &:nth-child(8){
+                    margin-top: 150px !important
+                }
+            }
+            /*width:1170*/
+            @include MQ(AD){
+
+                &:first-child{
+                    .film-type2-item{
+                        float:right;
+                    }
+                }
+                &:nth-child(3){
+                    margin-top:100px ;
+                }
+                &:nth-child(5){
+                    margin-top:100px ;
+                 }
+                  &:nth-child(7){
+                     margin-top :100px;
+                }
+                &:nth-child(8){
+                     margin-top :100px;
+                }
+                .list-film-cat{
+                    @include font-size(12px);
+                    letter-spacing:5px;
+                }
+                .list-film-name{
+                    font-family: $fr;
+                    @include font-size(30px);
+                }
+                .list-film-desc{
+                    color:$black_07;
+                    font-size: 14px;
+                }
+                &:nth-child(4){
+                    position:relative;
+                    .film-type2-item{
+                       float:left;
+                    }
+                 }
+                  &:nth-child(6){
+                    .film-type2-item{
+                        float:right;
+
+                    }
+                 }
+                 &:first-child, &:nth-child(4), &:nth-child(5), &:nth-child(6){
+                    &:hover{
+                        .view-more{
+                            @include transition('fast') ;
+                            border:1px solid $Black;
+                            background: $Black;
+                            a{
+                                color:$White;
+                            }
+                        }
+                    }
+                }
+                &:nth-child(2), &:nth-child(3), &:nth-child(7){
+                    &:hover{
+                        .view-more{
+                            @include transition('slow') ;
+                            a{
+                                color:$Black;
+                            }
+                        }
+                    }
+                }
+
+            }
+            /*ipad*/
+            @include OP(MS){
+
+                float:left;
+                margin-bottom:30px;
+                .film-type2-item{
+                    img{
+                        width:100%;
+                        height:auto;
+                    }
+                    .list-film-cat{
+                        margin-top:20px;
+                        color:$black_05;
+                    }
+                    .list-film-desc{
+                        color:$black_05;
+                        padding:0 70px;
+                        display:block;
+                    }
+                    .list-film-name{
+                        a{
+                            color:$Black;
+                        }
+                    }
+                    .list-viewmore{
+                        margin-top:20px
+                    }
+                    &:hover{
+                        .view-more{
+                            @include transition('slow') ;
+                            background: $Black;
+                            a{
+                                color:$White;
+                            }
+                        }
+                    }
+                }
+            }
+             @include RP(AM){
+                width:100%;
+                margin-bottom:30px;
+                padding:0 15px;
+                .film-type2-item{
+                    img{
+                        width:100%;
+                        height:auto;
+                    }
+                    .list-film-cat{
+                        margin-top:20px;
+                        color:$black_05;
+                    }
+                    .list-film-desc{
+                        color:$black_05;
+                        display:block;
+                    }
+                    .list-film-name{
+                        a{
+                            color:$Black;
+                        }
+                    }
+                    .list-viewmore{
+                        margin-top:20px
+                    }
+                    &:hover{
+                        .view-more{
+                            @include transition('slow') ;
+                            background: $Black;
+                            a{
+                                color:$White;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .f-left{
+            float:left;
+            padding-right:20px;
+            @include OP(MS){
+                padding-right: 15px;
+            }
+            @include RP(AM){
+                padding:0 15px;
+            }
+        }
+        .f-right{
+            float:right;
+            padding-left:20px;
+            @include OP(MS){
+                padding-left: 15px;
+            }
+             @include RP(AM){
+                 padding:0 15px;
+            }
+        }
+        .f-big{
+            @include MQ(LG){
+                margin-bottom:200px!important;
+            }
+            @include MQ(L){
+                margin-bottom: 150px;
+                position:relative;
+                .film-type2-item{
+                    img{
+                        width:100%;
+                        height:auto;
+                    }
+                    .list-film-content{
+                        position:absolute;
+                        @include center(xy);
+                        .list-film-cat, .list-film-desc{
+                            color:$white_05;
+                        }
+                    }
+                    .list-viewmore{
+                        position:absolute;
+                        @include center(xy);
+                        @include transition('slow');
+                        top:100%;
+                        opacity:0;
+                    }
+                    .list-film-desc{
+                        @include transition('slow');
+                    }
+
+                }
+                &:hover{
+                    .list-viewmore{
+                        opacity:1;
+                        top:80%;
+                    }
+                    .list-film-desc{
+                       opacity:0;
+                    }
+                }
+            }
+        }
+        .f-small{
+            @include MQ(L){
+                .film-type2-item{
+                    width:65%;
+                    img{
+                        width:100%;
+                        height:auto;
+                    }
+                    .list-film-cat{
+                        margin-top:20px;
+                        a{
+                            color:$black_05;
+                        }
+                    }
+                    .list-film-desc{
+                        color:$black_05;
+                        padding:0 70px;
+                    }
+                    .list-film-name{
+                        a{
+                            color:$Black;
+                        }
+                    }
+                    .list-viewmore{
+                        margin-top:20px
+                    }
+                }
+            }
+        }
+
+    }
+    .fl-title-img{
+        margin:50px 0;
+        img{
+            opacity: 0.2;
+        }
+    }
+    .arrow-down{
+        margin:110px 0 90px 0;
+    }
+}
+
+
+.list-film-title{
+    .fl-title-big{
+        margin-bottom:0;
+    }
+}
+
+
+.fl-pagination{
+    margin-top:60px;
+    #pagination-flickr{
+        li{
+            padding:0 7px;
+        }
+        .current{
+            color:$Black !important;
+            @include RP(AM){
+                @include font-size(14px);
+            }
+        }
+        .prev{
+            padding-right:20px;
+            @include RP(AM){
+                padding-right: 10px;
+            }
+            i{
+                margin-right:5px;
+            }
+        }
+        .next{
+            padding-left:20px;
+            @include RP(AM){
+                padding-left:10px;
+            }
+             i{
+                margin-left:5px;
+            }
+        }
+    }
+}
+.fl-title-desc{
+    span{
+        p{
+            margin-bottom: 0px!important;
+        }
+    }
+}

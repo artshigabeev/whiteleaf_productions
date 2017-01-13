@@ -1,0 +1,66 @@
+/*instagram */
+#fl_instagram{
+    margin-bottom:-100px;
+    display:table;
+    .box-center{
+        margin-bottom:50px;
+        @include RP(BM){
+            position: absolute;
+            @include center(xy);
+            margin-bottom:0;
+            .title-gray{
+                color:$white_05;
+                font-size:40px;
+            }
+        }
+        @include MIN(E){
+           .title-gray{
+            font-size:24px;
+           }
+        }
+    }
+}
+.list-item-instagram{
+    height:240px;
+    float: left;
+    width: 100%;
+    .item-instagram{
+        @include MQ(L){
+            height:180px;
+        }
+        @include MIN(MAX){
+            height:240px;
+        }
+        @include RP(L){
+            height:140px
+        }
+        @include OP(MBS){
+            height:150px;
+            width:25%;
+        }
+        @include MIN(E){
+            height:100px;
+            width:25%;
+        }
+        width: 12.5%;
+        padding:0;
+        float: left;
+        //height:240px;
+        box-sizing: border-box;
+        border: none;
+        overflow: hidden !important;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            // height:auto;
+            // min-height: 100%;
+        }
+    }
+}
+/* end instagram*/
+.beau-list-istagram{
+    li{
+        list-style:none;
+    }
+}

@@ -1,0 +1,18 @@
+
+    .win-img{
+        padding:30px 0;
+        text-align:center;
+        @include RP(AM){
+            min-height: 150px;
+        }
+        img{
+            opacity: 0.5;
+            @include transition;
+        }
+        &:hover{
+            img{
+                opacity:1;
+
+            }
+        }
+    }

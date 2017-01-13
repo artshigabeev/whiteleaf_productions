@@ -1,0 +1,209 @@
+.fl-discover{
+    margin-top:150px;
+}
+.fl-mg-top{
+    margin-top:50px;
+    @include OP(MS){
+        margin-top:30px;
+    }
+    @include RP(AM){
+        text-align: center;
+    }
+    .more {
+        i{
+            color:$black_04;
+        }
+        &:hover{
+            i{
+                color:$White;
+            }
+        }
+    }
+}
+.discover-content-box1{
+    display:table;
+    width:100%;
+    @include MQ(M){
+        padding:100px 50px 0 50px;
+    }
+    @include OP(MS){
+        padding: 30px;
+    }
+    @include RP(AM){
+        padding:15px;
+    }
+}
+.discover-item{
+    color:#a3a3a3;
+    font-size: $body-size;
+    @include RP(AM){
+        @include font-size(14px);
+        margin-top:20px;
+        padding-left:0;
+        text-align: center;
+    }
+    padding-left:30px;
+    &:hover{
+        .view-more{
+            background:$black_09;
+            a{
+                color:$White;
+            }
+        }
+    }
+    .discover-title{
+        font-family: $bd-b;
+        letter-spacing: 9px;
+        text-transform: uppercase;
+        @include OP(MS){
+            @include font-size(14px);
+            letter-spacing: 5px;
+        }
+        @include RP(AM){
+            text-align: center;
+            @include font-size(14px);
+            letter-spacing: 5px;
+        }
+    }
+    .discover-name{
+        font-family: $fr;
+        @include font-size(90px);
+        @include OP(MS){
+            @include font-size(50px);
+            margin-top:-10px;
+        }
+        @include OP(MBM){
+            @include font-size(40px);
+            margin-top:0;
+        }
+        @include RP(MB){
+            @include font-size(30px);
+            margin-top: 0;
+        }
+        font-weight:700;
+        color:$Black;
+        margin-top:-20px;
+    }
+    .discover-content{
+        font-family:$bd-r;
+        line-height: 1.7em;
+        color:$black_05;
+        @include OP(MS){
+            @include font-size(14px);
+            line-height: 1.5em;
+        }
+    }
+    .discover-desc{
+        @include font-size(20px);
+        font-family:$bd-b;
+        color:$Black;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        line-height: 1.7em;
+        @include MQ(L){
+            margin:65px 0 35px 0;
+            font-size: $body-size;
+        }
+        @include OP(MS){
+            margin:30px 0;
+        }
+        @include OP(MBM){
+            margin:20px 0;
+            @include font-size(18px);
+        }
+        @include RP(MB){
+            @include font-size($body-size);
+            margin:10px 0;
+        }
+    }
+    .discover-more{
+        margin-top:60px;
+
+    }
+}
+.view-more{
+    padding:0 20px 0 25px;
+    @include OP(MS){
+        padding: 0 10px 0 15px;
+    }
+    @include RP(AM){
+        padding:0 15px 0 20px;
+    }
+    border:1px solid $black_01;
+    display:inline-block;
+    i{
+        padding-left:5px;
+    }
+     a{
+        font-family: $bd-b;
+        color:$black_05;
+        @include font-size(10px);
+        text-decoration: none;
+        letter-spacing: 2px;
+        @include OP(MS){
+            @include font-size(8px);
+        }
+        @include OP(MS){
+            line-height: 35px;
+        }
+        @include RP(AM){
+            line-height: 30px;
+        }
+    }
+    &:hover{
+        border:1px solid $black_07;
+        a{
+            color:$black_07;
+            text-decoration: none;
+
+        }
+    }
+}
+/*Discover type 3*/
+.content1{
+    line-height:1.5em;
+    font-family:$bd-r;
+    @include font-size(16px);
+    padding:20px 0;
+    img{
+        opacity:0.5;
+        @include RP(MBLS){
+            margin-bottom: 20px;
+        }
+         &:hover{
+            opacity:1;
+        }
+    }
+}
+.left-desc{
+    color:$Black;
+    line-height: 1.7em;
+    @include MQ(M){
+        @include font-size(20px);
+        padding-right:30px;
+    }
+    @include RP(AM){
+        @include font-size(14px);
+    }
+
+
+}
+.right-desc{
+    @include MQ(M){
+        padding-left:30px;
+    }
+    @include RP(AM){
+        padding-left:0;
+        margin-top:20px;
+        @include font-size(14px);
+    }
+}
+.discover-img{
+    @include MQ(AD){
+        margin-bottom:-50px;
+    }
+    img{
+        width:100%;
+        height:auto;
+    }
+}

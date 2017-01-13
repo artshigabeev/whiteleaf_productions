@@ -1,0 +1,64 @@
+.ms-testimonial{
+    overflow: hidden;
+    padding-top:30px;
+    .ms-inner-controls-cont{
+        padding-bottom:50px;
+        .ms-view{
+            overflow:initial;
+        }
+    }
+    .ms-bullets.ms-dir-h{
+        bottom:0;
+        .ms-bullet{
+            width:5px;
+            height:5px;
+            background:#c8c8c8;
+            &.ms-bullet-selected{
+                background:$Black;
+            }
+        }
+    }
+}
+.testimonial-quote {
+  position: relative;
+  font-family:$fr;
+  line-height: 1.5em;
+  margin-top: 0;
+  margin-bottom: 1em;
+  font-size: 1.25em;
+  text-align:center;
+}
+
+.testimonial-quote:before {
+  content: '“';
+  font-family:$fr;
+  position: absolute;
+  font-size: 150px;
+  top: 16px;
+  left: 48%;
+  z-index: 999;
+  color:$Black;
+}
+
+.author {
+  margin: 20px 0 40px 0;
+  font-size: 12px;
+  opacity: 0.7;
+  font-family: $bd-b;
+  letter-spacing: 3px;
+}
+.testimonial-desc{
+    color:$black_07;
+    @include MQ(L){
+        padding:0 150px;
+    }
+    @include OP(MS){
+        padding:0 50px;
+        @include font-size(14px);
+    }
+    @include RP(AM){
+        padding:0 10px;
+        font-size: 14px;
+    }
+    line-height:1.7em;
+}

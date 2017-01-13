@@ -1,0 +1,282 @@
+@import 'bourbon';
+@import './partials/fonts'; //Import more font in here
+@import './partials/be_icon'; // Import icon beautheme
+@import './partials/mixins'; // custom MIxins
+@import './partials/variables'; // Fonts, color ...
+@import "./partials/layout";
+
+/*
+    Include all style in site need for develop
+*/
+
+
+/**
+ * Table of Contents:
+01 body style
+02 reset style
+03 style menu humberger
+04 style menu
+05 style header 01
+06 style header 02
+07 style header 03
+08 style footer 01
+09 style footer 02
+10 style footer 03
+11 style sidebar
+12 style sidebar 02
+13 style form
+14 style form comment
+15 style page history
+16 style page film 01
+17 style page film 02
+18 style page video
+19 style page service
+20 style page film detail
+21 style page contact 01
+22 style page contact 02
+23 style page blog 01
+24 style page blog 02
+25 style page blog 03
+26 style page about
+27 style page detail blog 01
+28 style page detail blog 02
+29 style page home blog
+30 style page 404
+31 style shortcode timeline
+32 style shortcode testimonial
+33 style shortcode countdown
+34 style shortcode service
+35 style shortcode winning
+36 style shortcode partner
+37 style shortcode morefilm
+38 style shortcode blog
+39 style shortcode crew
+40 style shortcode discover
+41 style shortcode event
+42 style shortcode film 02
+43 style shortcode gallery
+44 style shortcode pagination
+45 style shortcode social
+47 style shortcode visio
+48 style shortcode director
+49 style shortcode team list
+50 style shortcode section blog 02
+51 style shortcode instagram
+
+ -------------------------------*/
+
+/*
+01 body style
+*/
+@import "./base/body";
+
+/*
+02 reset style
+*/
+@import "./base/reset";
+/*
+03 style menu humberger
+*/
+@import "./layouts/menu_humberger";
+/*
+04 style menu
+*/
+@import "./layouts/menu";
+/*
+05 style header 01
+*/
+@import "./layouts/header_style1";
+/*
+06 style header 02
+*/
+@import "./layouts/header_style2";
+/*
+07 style header 03
+*/
+@import "./layouts/header_style3";
+/*
+08 style footer 01
+*/
+@import "./layouts/footer_style1";
+/*
+09 style footer 02
+*/
+@import "./layouts/footer_style2";
+/*
+10 style footer 03
+*/
+@import "./layouts/footer_style3";
+/*
+11 style sidebar
+*/
+@import "./layouts/sidebar";
+/*
+12 style sidebar 02
+*/
+@import "./layouts/side-bar-02";
+/*
+13 style form
+*/
+@import "./layouts/form";
+/*
+14 style form comment
+*/
+@import "./layouts/form-comment";
+
+/*
+=================== Import style page =============
+*/
+
+/*
+15 style page history
+*/
+@import "./pages/fl_history";
+/*
+16 style page film 01
+*/
+@import "./pages/fl_film";
+/*
+17 style page film 02
+*/
+@import "./pages/fl_film2_style";
+/*
+18 style page video
+*/
+@import "./pages/fl_video";
+/*
+19 style page service
+*/
+@import "./pages/fl_service";
+/*
+20 style page film detail
+*/
+@import "./pages/fl_filmdetail";
+/*
+21 style page contact 01
+*/
+@import "./pages/fl_contact-1";
+/*
+22 style page contact 02
+*/
+@import "./pages/fl_contact-2";
+/*
+23 style page blog 01
+*/
+@import "./pages/page_blog-01";
+/*
+24 style page blog 02
+*/
+@import "./pages/page_blog-02";
+/*
+25 style page blog 03
+*/
+@import "./pages/page_03-blog";
+/*
+26 style page about
+*/
+@import "./pages/page_about-02";
+/*
+27 style page detail blog 01
+*/
+@import "./pages/page_detail-blog-1";
+/*
+28 style page detail blog 02
+*/
+@import "./pages/page_detail-blog-2";
+/*
+29 style page home blog
+*/
+@import "./pages/page_home-blog-01";
+/*
+30 style page 404
+*/
+@import "./pages/404";
+
+/*
+ ============ Import style shortcode ===========
+*/
+
+/*
+31 style shortcode timeline
+*/
+@import "./shortcode/fl_timeline";
+/*
+32 style shortcode testimonial
+*/
+@import "./shortcode/fl_testimonial";
+/*
+33 style shortcode countdown
+*/
+@import "./shortcode/fl_countdown";
+/*
+34 style shortcode service
+*/
+@import "./shortcode/fl_service";
+/*
+35 style shortcode winning
+*/
+@import "./shortcode/fl_winning";
+/*
+36 style shortcode partner
+*/
+@import "./shortcode/fl_partners";
+/*
+37 style shortcode morefilm
+*/
+@import "./shortcode/fl_morefilm";
+/*
+38 style shortcode blog
+*/
+@import "./shortcode/fl_blog";
+/*
+39 style shortcode crew
+*/
+@import "./shortcode/fl_crew";
+/*
+40 style shortcode discover
+*/
+@import "./shortcode/fl_discover";
+/*
+41 style shortcode event
+*/
+@import "./shortcode/fl_event";
+/*
+42 style shortcode film 02
+*/
+@import "./shortcode/fl_films";
+/*
+43 style shortcode gallery
+*/
+@import "./shortcode/fl_gallery";
+/*
+44 style shortcode pagination
+*/
+@import "./shortcode/fl_pagination";
+/*
+45 style shortcode social
+*/
+@import "./shortcode/fl_social";
+/*
+47 style shortcode vision
+*/
+@import "./shortcode/fl_vision";
+/*
+48 style shortcode director
+*/
+@import "./shortcode/fl_director";
+/*
+49 style shortcode team list
+*/
+@import "./shortcode/fl_team_list";
+/*
+50 style shortcode section blog 02
+*/
+@import "./shortcode/fl_section-blog-02";
+/*
+51 style shortcode instagram
+*/
+@import "./shortcode/fl_instagram";
+/*
+51 style shortcode instagram
+*/
+@import "./pages/detail_team";

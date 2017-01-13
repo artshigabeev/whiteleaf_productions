@@ -1,0 +1,18 @@
+// .partner-item{margin:172px 0 160px 0;}
+.partner-item{
+    .partner-img{
+        text-align: center;
+        img{
+            opacity: 0.5;
+            @include RP(MBL){
+                max-width:100%;
+                height:auto;
+            }
+        }
+        &:hover{
+            img{
+                opacity: 1;
+            }
+        }
+    }
+}

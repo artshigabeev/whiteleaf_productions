@@ -1,0 +1,92 @@
+#page404{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow:hidden;
+    background: url(../images/404bg.jpg) no-repeat center center #000;
+    // background-color: #000;
+    // background-size: cover;
+    // background-repeat: no-repeat;
+    // background-position: center center;
+    // background-image: url(../images/404bg.jpg);
+    position: relative;
+    padding-top: 145px;
+    text-align: center;
+    .img404{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        // position: relative;
+        @include center(xy);
+        object-fit: cover;
+        z-index: 1;
+        // display: none;
+    }
+    @include RP(S){
+        width: 100%;
+        height: auto;
+        background-size: 100% auto;
+        padding-bottom: 100px;
+        min-height: 100vh;
+    }
+    .logo-white{
+        float: left;
+        width: 100%;
+        height: 65px;
+        a{
+            position: relative;
+            display: block;
+            @include center(x);
+            z-index: 2;
+        }
+    }
+}
+.content-404{
+    position: relative;
+    z-index: 9;
+}
+.box-text404{
+    float: left;
+    width: 100%;
+    height: auto;
+    margin-top: 160px;
+    color: $White;
+    text-align: center;
+    @include RP(S){
+        margin-top: 60px;
+    }
+    .title-box404{
+        font-family: $bd-b;
+        @include font-size(16px);
+        color: $white-02;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+    }
+    .text-404{
+        font-family: $fr;
+        @include font-size(100px);
+        font-weight: 700;
+        margin-bottom: 60px;
+        float: left;
+        width: 100%;
+        @include RP(S){
+            @include font-size(45px);
+            // margin-bottom: 40px;
+        }
+    }
+    .btn-white{
+        opacity: 0.5;
+        display: block-inline;
+        border: 1px solid #fff;
+        padding: 13px 40px;
+        color: #fff;
+        font-family: $bd-b;
+        @include font-size(10px);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        &:hover{
+            opacity: 1;
+        }
+    }
+
+}

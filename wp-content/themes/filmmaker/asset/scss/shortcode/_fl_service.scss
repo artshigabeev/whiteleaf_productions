@@ -1,0 +1,70 @@
+
+.service-title{
+        font-family:$bd-b;
+        letter-spacing: 8px;
+        text-align:center;
+        margin-bottom:50px;
+        color:$black_05;
+    }
+.service-content{
+    font-family: $bd-r;
+    text-align:center;
+    padding:0 30px 80px 30px;
+    @include MQ(L){
+        margin-bottom:30px !important ;
+    }
+    @include OP(TBM){
+        margin-bottom:30px !important ;
+    }
+    @include OP(TBMS){
+        padding: 0 15px 50px 15px;
+        margin-bottom: 30px;
+    }
+    @include RP(AM){
+        padding:0 15px 50px 15px;
+        margin-bottom: 15px !important;
+    }
+    &:hover{
+        .service-icon{
+            color:$Black;
+        }
+    }
+    .service-icon{
+        margin-bottom:-10px;
+        font-size: 7em;
+        color:$black_03;
+         @include RP(MBL){
+            @include font-size(80px);
+         }
+    }
+    .service-name{
+        font-family: $fr;
+        font-weight:700;
+        color: $Black;
+        font-size:1.250em;
+        @include RP(MBL){
+            font-size: $body-size;
+        }
+    }
+    .service-desc{
+        margin-top:13px;
+        line-height:1.5em;
+        @include RP(MBL){
+            font-size: 14px;
+        }
+    }
+
+}
+.box-content-hover {
+    border:1px solid $black_01;
+
+    &:hover{
+    border:1px solid $Black;
+    -webkit-transition: border 0.5s ease-in-out;
+    -moz-transition: border 0.5s ease-in-out;
+    transition: border 0.5s ease-in-out;
+    .service-icon{
+        color:$Black;
+        }
+    }
+}

@@ -1,0 +1,83 @@
+@import 'bourbon';
+@import './partials/fonts'; //Import more font in here
+@import './partials/be_icon'; // Import icon beautheme
+@import './partials/mixins'; // custom MIxins
+@import './partials/variables'; // Fonts, color ...
+@import "./partials/layout";
+
+#discover-home1{
+    .box-center{
+        @include RP(M){
+            margin-bottom: -15px !important;
+        }
+        @include MIN(MM){
+            margin-bottom: 20px !important;
+        }
+    }
+}
+#home1-service{
+
+}
+/*Text*/
+.vc_text_block{
+    text-align:center;
+    font-family: $fr;
+    .vc_text_discover{
+        color:$Black;
+        font-weight: 700;
+    }
+}
+@media screen and (min-width:992px){
+    .vc_text_block{
+        font-size:30px;
+    }
+}
+@media (max-width:991px) and (min-width:768px){
+    .vc_text_block{
+        font-size:25px;
+    }
+}
+@media screen and (max-width:600px){
+    .vc_text_block{
+        font-size:14px;
+        p{
+            display:inline;
+            line-height: 1.5em;
+            &:last-child{
+                display:table;
+                width:100%;
+                margin-top:20px;
+            }
+        }
+    }
+}
+.vc_more_film{
+    .more_film{
+        img{
+            // width:100%;
+            // height:auto;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+.home3-more-fl{
+    @include MQ(AD){
+       .h3-sub-more1{
+            padding:0 15px 0 30px !important;
+       }
+       .h3-sub-more2{
+            padding:0 15px !important;
+       }
+       .h3-sub-more3{
+            padding:0 30px 0 15px !important;
+       }
+
+    }
+}
+@include RP(AM){
+    .vc_custom_1452588311474{
+        display:none;
+    }
+}

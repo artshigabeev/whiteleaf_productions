@@ -1,0 +1,43 @@
+#pagination-flickr{
+     margin:0;
+     padding:0;
+     text-align:center;
+    li{
+
+        font-family:$bd-b;
+        color:#999;
+        padding:0 3px;
+        display:inline-block;
+        a{
+            @include RP(AM){
+                @include font-size(12px);
+            }
+            color:$black_05;
+            &:hover{
+                color:$Black;
+            }
+        }
+    }
+    li:first-child a, li:last-child a{
+        letter-spacing: 2px;
+        font-size:12px;
+
+    }
+    li:nth-child(4), li:nth-child(5), li:nth-child(6){
+        padding:0 2px !important;
+    }
+}
+
+
+#pagination-flickr .previous-off{
+    padding-right:20px;
+    @include RP(AM){
+        padding-right: 10px;
+    }
+}
+#pagination-flickr .next{
+    padding-left:20px;
+    @include RP(AM){
+        padding-left: 10px;
+    }
+}

@@ -1,0 +1,118 @@
+.blog-03{
+    margin:140px 0;
+    .pagi{
+        margin:50px 0;
+    }
+    .list-post-03{
+        padding: 0 40px 10px 0;
+        list-style: none;
+        border-bottom: $black_005 1px solid;
+        @include RP(AD){
+            padding: 0 20px 10px 30px;
+        }
+        .item{
+            display:table;
+            clear:both;
+            margin-bottom:140px;
+            @include MIN(E){
+                margin-bottom:100px;
+            }
+            a{
+                color:$black_05;
+            }
+            img{
+                width:100%;
+                height:auto;
+                @include MIN(E){
+                    min-height:150px;
+                }
+            }
+            .no-img-title{
+                .title-post{
+                    text-align:left;
+                }
+            }
+            .post-t{
+                float:left;
+                width: 50%;
+                padding: 10px 15px 20px 30px;
+                @include RP(AD){
+                    padding:0 15px 20px 30px;
+                }
+                @include MIN(E){
+                    width:100%;
+                    padding:10px 5px 20px 5px;
+                    text-align:center;
+                }
+                .info{
+                    padding: 15px 0;
+                    @include MIN(E){
+                        padding:5px 0;
+                        margin:0 auto;
+                        .more-info>li{
+                            padding:0 8px;
+                            &:first-child{
+                                padding-left:0;
+                            }
+                        }
+                    }
+                }
+                .title-post{
+                    a{
+                        line-height:30px;
+                        font-size:20px;
+                        color:$Black;
+                        @include MIN(E){
+                            font-size:16px;
+                        }
+                    }
+                }
+            }
+            .post-img{
+                position:relative;
+                width:50%;
+                float:left;
+                @include MIN(E){
+                    width:100%;
+                }
+                .date-post{
+                    position: absolute;
+                    left: -15px;
+                    top: 15px;
+                    z-index:9;
+                    @include MIN(E){
+                       left:-10px;
+                    }
+                     ul{
+                        list-style:none;
+                        li{
+                            color:$Black;
+                            font-size:40px;
+                            width:100%;
+                            line-height:1em;
+                            &:first-child{
+                                border-bottom:1px solid $black_02;
+                            }
+                            @include MIN(E){
+                                font-size:24px;
+                            }
+                        }
+                    }
+                }
+            }
+            &:nth-child(3n+1){
+                .post-img{
+                    width:100%;
+                    height:auto;
+                }
+                .post-t{
+                    width:100%;
+                    padding:10px 60px 0 0;
+                    @include MIN(E){
+                        padding:10px 0 0 0;
+                    }
+                }
+            }
+        }
+    }
+}

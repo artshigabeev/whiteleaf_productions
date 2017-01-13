@@ -1,0 +1,33 @@
+// .form-comment{
+//     @include font-size(14px);
+//     font-family: $bd-r;
+//     color:$black_05;
+//     padding-right:40px;
+//     input[type="text"], textarea {
+//         width:100%;
+//         padding:15px 15px;
+//         outline: none;
+//         margin-bottom:20px;
+//         border:1px solid $black_01;
+//         &:hover{
+//             border:1px solid $black_07;
+//         }
+//     }
+//     .btn-default{
+//         width:100%;
+//         padding:10px 15px;
+//         background:$Black;
+//         border-radius:0;
+//         color:$White;
+//         font-family: $bd-b;
+//         letter-spacing: 3px;
+//         @include font-size(12px);
+//         &:hover{
+//             background:$Black;
+//             color:$White;
+//         }
+//     }
+//     .text-area{
+//         height:180px;
+//     }
+// }

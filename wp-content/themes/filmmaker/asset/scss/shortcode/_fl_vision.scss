@@ -1,0 +1,28 @@
+
+.list-cc-title{
+    font-size:10px;
+    color:$black_04;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+.list-cc-box{
+     text-align:center;
+     margin-bottom:100px;
+    li{
+        width:100%;
+        padding:5px 0;
+        a{
+            font-size:14px;
+            font-family: $fr;
+            color:$black_08;
+            font-weight:700;
+            &:hover{
+                color:$Black;
+                font-weight:900;
+                -webkit-transition: font-weight 0.5s linear;
+                -moz-transition: font-weight 0.5s linear;
+                transition: font-weight 0.5s linear;
+            }
+        }
+    }
+}

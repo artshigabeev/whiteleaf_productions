@@ -1,0 +1,199 @@
+.title-time{
+    @include MQ(L){
+        font-size:50px;
+    }
+    @include OP(MS){
+        @include font-size(30px);
+    }
+    padding:0;
+    font-family: $fr;
+    font-weight:700;
+    color:$Black;
+}
+.timeline-item{
+    margin: 150px 0 200px 0;
+    .timline-history{
+        .title-gray{
+            line-height:1;
+            font-weight:400;
+        }
+        .title-1{
+            padding:30px 0 50px 0;
+        }
+    }
+}
+.timeline-page-box{
+    position:relative;
+    &:before{
+        @include MQ(M){
+            left:49.99%;
+            content:"";
+            position:absolute;
+            width:1px;
+            height:100%;
+            background:$black_01;
+        }
+    }
+}
+.timeline-box{
+    position:relative;
+    width:100%;
+    padding:0 50px;
+    // @include OP(MS){
+    //     padding: 0 30px;
+    // }
+    @include RP(AM){
+        padding:0 15px;
+    }
+    .d-content,.d-even,.d-img{
+        margin-top:20px;
+    }
+
+    li{
+        display:table;
+        position:relative;
+        width:100%;
+        padding-bottom: 140px;
+        @include OP(MS){
+            padding-bottom:50px;
+        }
+        @include RP(AM){
+            padding-bottom:30px;
+        }
+        .d-content, .d-img{
+            width:50%;
+            @include RP(AM){
+                width:100%;
+            }
+        }
+        .gray-desc{
+            @include RP(BD){
+                line-height: 1.5em;
+                margin-top: 10px;
+            }
+            @include RP(AM){
+                @include font-size(13px);
+            }
+        }
+        .d-img{
+            img{
+                width:100%;
+                height:auto;
+            }
+        }
+    }
+    // li:last-child{
+    //     padding-bottom:0;
+    //     top: -20px;
+    //     .d-even{
+    //         width:7px;
+    //         height:7px;
+    //         border:none;
+    //         top:4px;
+    //     }
+    //     .cunhat{
+    //         margin-top:60px;
+    //         text-align:center;
+    //         top:100%;
+    //         @include center(x);
+    //         position:absolute;
+    //         width:50%;
+    //         .title-desc{
+    //             padding:5px 0 15px 0;
+    //             font-size:50px;
+    //         }
+    //     }
+    // }
+    li:nth-child(odd){
+        .d-content{
+            @include MQ(L){
+                float:left;
+                text-align:right;
+                padding-right:50px;
+            }
+            @include OP(MS){
+                float:left;
+                text-align:right;
+                padding-right:30px;
+            }
+        }
+        .d-img{
+            @include MQ(L){
+                float:right;
+                padding-left:50px;
+            }
+             @include OP(MS){
+                float:right;
+                padding-left:30px;
+            }
+
+        }
+
+    }
+    li:nth-child(even){
+            .d-content{
+               @include MQ(M){
+                     float:right;
+                    text-align:left;
+                     padding-left:50px;
+               }
+                @include OP(MS){
+                    float:right;
+                     padding-left:30px;
+                }
+            }
+            .d-img{
+                @include MQ(M){
+                    img{width:100%;}
+                    float:left;
+                     padding-right:50px;
+                }
+                @include OP(MS){
+                    float:left;
+                     padding-right:30px;
+                }
+             }
+
+        }
+    .d-even{
+        @include MQ(M){
+            @include center(x);
+            width:14px;
+            height:14px;
+            border:4px solid $White;
+            border-radius:50%;
+            background:$Black;
+            position:absolute;
+        }
+    }
+}
+.endhistory{
+    @include MQ(M){
+        text-align: center;
+        width:50%;
+    }
+    @include RP(AM){
+        padding:30px 15px 50px 15px;
+        background:#f1f1f1;
+        text-align: center;
+        .gray-desc{
+            @include font-size(13px);
+        }
+        .title-desc{
+            @include font-size(30px);
+        }
+    }
+    margin:0 auto;
+    position:relative;
+    .d-even{
+        @include MQ(M){
+            width:6px;
+            height:6px;
+            border:none;
+            top:4px;
+            margin:4px auto 30px auto;
+            background:$Black;
+            border-radius:50%;
+        }
+    }
+}

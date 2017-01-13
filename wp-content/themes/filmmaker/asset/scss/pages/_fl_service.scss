@@ -1,0 +1,139 @@
+.service-container{
+    @include MQ(AD){
+        background:$Black;
+        padding-bottom:56.25%;
+        height:0;
+        overflow:hidden;
+        position:relative;
+        color:$White;
+    }
+    @include OP(TBM){
+        background:$Black;
+    }
+    @include OP(TBMS){
+        width:100%;
+        height:auto;
+        padding:0 10px;
+
+    }
+    @include RP(AM){
+        width:100%;
+        height:auto;
+        padding:0 15px;
+    }
+    img{
+        width:100%;
+        height:auto;
+    }
+    .service-group{
+        @include MQ(MI){
+            top: 50% !important;
+        }
+        @include MQ(AD){
+            position:absolute;
+            @include center(xy);
+            @include transition;
+            top:35%;
+        }
+    }
+    .service-icon{
+
+        @include MQ(MI){
+            margin-top:-62px !important;
+        }
+        @include MQ(AD){
+            color:$White !important;
+        }
+        @include OP(TBM){
+            color:$White !important;
+        }
+        @include OP(TBMS){
+            color: $Black !important;
+        }
+         @include RP(AM){
+            color: $Black !important;
+            padding:-15px 0 30px 0;
+        }
+    }
+    .service-content{
+        margin-bottom:0 !important;
+        width:100%;
+        @include MQ(MG){
+            padding: 0 160px !important;
+        }
+         @include MQ(MI){
+            padding: 0 100px ;
+        }
+        @include MQ(AD){
+            position:absolute;
+            @include center(xy);
+        }
+        @include OP(TBM){
+            position: absolute;
+            @include center(xy);
+            padding:0 30px 50px 30px;
+        }
+
+    }
+    .service-name{
+        color:$White !important;
+        @include MQ(MI){
+            margin-top: -25px !important;
+        }
+        @include MQ(AD){
+            margin-top: -20px;
+        }
+        @include OP(TBMS){
+           color: $black_05 !important;
+        }
+        @include RP(AM){
+           color: $Black !important;
+        }
+    }
+    .service-desc{
+        @include MQ(MI){
+            position:relative !important;
+            margin-top:50% !important;
+        }
+         @include MQ(AD){
+            padding:0 100px;
+             color:$white_07;
+            position:absolute;
+             @include center(xy);
+            -webkit-transition: all 0.5s 0.2s ease-in-out;
+            -moz-transition: all 0.5s 0.2s ease-in-out;
+            transition: all 0.5s 0.2s ease-in-out;
+             opacity:0;
+             top:100%;
+             width:100%;
+        }
+        @include OP(TBM){
+            display: block;
+            padding:0 30px;
+            color:$white_05;
+        }
+    }
+    &:hover{
+        @include MQ(MI){
+            .service-desc{
+                opacity:1;
+                margin-top:40% !important;
+            }
+            .service-group{
+                top:27% !important;
+
+            }
+
+        }
+        @include MQ(AD){
+            .service-desc{
+                opacity:1;
+                top:93%;
+            }
+            .service-group{
+                top:-90%;
+            }
+
+        }
+    }
+}

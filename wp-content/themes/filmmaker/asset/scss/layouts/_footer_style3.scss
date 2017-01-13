@@ -1,0 +1,182 @@
+
+/* Footer type3*/
+ .fl-footer{
+    padding-top:120px;
+    background:$Black;
+    color:$white_07;
+    font-family: $bd-r;
+    font-size: $body-size;
+    @include RP(AM){
+        padding:50px 15px 0 15px;
+    }
+    ul li{
+        list-style:none;
+        padding:5px 0;
+        a{
+            color: $white_04;
+            &:hover, &:active, &:focus{
+                color: $White;
+                text-decoration: none;
+            }
+        }
+
+    }
+}
+.fl-footer{
+    .copyright{
+        text-align:center;
+        padding:35px 0 50px 0 ;
+        color:$white_03;
+        @include font-size(14px);
+        a{
+            color:$white_03;
+        }
+    }
+    .subcribe-message{
+        text-align:center;
+    }
+}
+
+.ft-subcri-box{
+    width:100%;
+    padding:35px 0 29px 0;
+    @include OP(MS){
+        padding:25px 0 20px 0;
+    }
+    @include RP(AM){
+        padding:15px 0 13px 0;
+    }
+    border:1px solid #1c1c1c;
+    display:table;
+    color:$white_03;
+    #beau-subcribe{
+        display:inline-flex;
+        width:100%;
+    }
+    .ft-subcri{
+        width:25%;
+        @include RP(AM){
+            width: 250px;
+        }
+        margin:0 auto;
+        .control-form{
+            width:100%;
+            background-color: transparent;
+            border:0;
+            color:$white_04;
+            letter-spacing: 2px;
+            font-family: $bd-b;
+            outline:0;
+            @include RP(AM){
+                @include font-size(13px);
+            }
+            &::-webkit-input-placeholder{
+                color:#4d4d4d;
+                line-height:20px;
+                letter-spacing: 2px;
+                @include font-size(14px);
+                font-family:$bd-b;
+                @include RP(AM){
+                    @include font-size(13px);
+                }
+            }
+            &:active::-webkit-input-placeholder, &:focus::-webkit-input-placeholder{
+                color:$black_05;
+            }
+        }
+    }
+    .input-group-btn, .btn{
+        background: transparent;
+        border:none;
+        outline:0;
+        margin-top:-1px;
+        i{
+            font-size: 16px;
+            color:$white_03;
+        }
+    }
+    &:hover{
+        background:$White;
+        .control-form{
+            color:black;
+        }
+        .input-group-btn, .btn{
+            i{
+                font-size: 16px;
+                color:$black_08;
+            }
+        }
+    }
+}
+/*style widget footer home3*/
+.fl-footer3{
+    .footer-widget{
+            margin-bottom:50px;
+            font-family: $bd-r;
+            color:$white_05;
+            @include RP(AM){
+                text-align: center;
+            }
+            .widget-title{
+                font-size:16px;
+                letter-spacing: 2px;
+                color:$white_07;
+                text-transform: uppercase;
+                margin-bottom:40px;
+                font-family: $bd-b;
+            }
+            .menu{
+                li{
+                    list-style:none;
+                    &:hover{
+                        a{
+                            color:$White;
+                        }
+                    }
+                    a{
+                        font-size:$body-size;
+                        color:$white_03;
+                        @include transition('fast');
+                    }
+                }
+            }
+           .list-social{
+                margin-top:10px;
+                li{
+                    list-style:none;
+                    display:inline;
+                    padding-right:20px;
+                    a{
+                        color:$white_05;
+                        &:hover{
+                            color: $White;
+                        }
+                    }
+                }
+            }
+    }
+}
+/**********Footer type 4******/
+.f-type4{
+    padding-top:150px;
+    .footer-social{
+        text-align: center;
+        .list-social{
+            margin-top:40px;
+            li{
+                display:inline;
+                padding:0 10px;
+                a{
+                    color:$black_05;
+                    &:hover{
+                        color:$Black;
+                    }
+                }
+            }
+        }
+    }
+    .copyright{
+        text-align:center;
+        margin:40px 0 50px 0;
+    }
+}

@@ -1,0 +1,73 @@
+/*===============about-02=====================*/
+/*header*/
+.header-flim3{
+    float: left;
+    width: 100%;
+    height: auto;
+    position: relative;
+    .top-header{
+        float: left;
+        width: 100%;
+        height: 100px;
+        top: 15px;
+        left: 0px;
+        position: absolute;
+        .container-fluid{
+            position: relative;
+            height: 100%;
+            padding:0;
+            width:90%;
+        }
+        #logo{
+            position: absolute;
+            float: left;
+            @include center(y);
+        }
+        .humber-flim{
+            @extend #logo;
+        }
+        .left{
+            position: absolute;
+            right: 0px;
+            @include center(y);
+            a{
+                color:$White;
+            }
+            i{
+                padding:0 15px;
+            }
+        }
+    }
+    .slider-bloger{
+        float: left;
+        width: 100%;
+        height: auto;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+.humber{
+    width: 28px;
+    height: auto;
+    position: absolute;
+    left: 0px;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    @include center(y);
+    i{
+        float: left;
+        margin-top: 2px;
+        height: 3px;
+        background: #fff;
+        width: 100%;
+        &:first-child{
+            margin-top:0px;
+        }
+    }
+}
+/* end header*/
+
+/*===============end about-02=====================*/

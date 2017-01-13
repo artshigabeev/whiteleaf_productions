@@ -1,0 +1,89 @@
+.event-item{
+    width:100%;
+    @include MQ(L){
+        height:800px;
+        font-size:30px;
+    }
+    @include OP(MS){
+        height:500px;
+        @include font-size(20px);
+    }
+    @include RP(AM){
+       display:none;
+    }
+    color:$White;
+    position:relative;
+    font-family: $fr;
+    overflow:hidden;
+    .event-content{
+        position:absolute;
+        width:100%;
+        text-align:center;
+        @include center(xy);
+        line-height:1.7em;
+        z-index:99;
+        span{
+            font-weight:700;
+            font-style: italic;
+
+        }
+        @include RP(AM){
+           p{
+             span{
+                font-size:13px !important;
+             }
+           }
+        }
+    }
+    .e-1500{
+        position:absolute;
+        @include MQ(L){
+            @include font-size(300px);
+            bottom:-270px;
+            letter-spacing: 70px;
+        }
+        @include OP(MS){
+            @include font-size(250px);
+            bottom:-135px;
+            letter-spacing: 35px;
+        }
+        color:#757575;
+        font-family: $fr;
+        text-align:center;
+        width:100%;
+        font-style:italic;
+        font-weight:700;
+
+        z-index:1;
+    }
+}
+//calender
+.calendar_wrap #wp-calendar{
+    width:100%;
+    font-weight: bold;
+    text-align:center;
+}
+.right-widget-content{
+    ul{
+        margin:0;
+        padding:0;
+        ul{
+            padding-left:20px;
+        }
+    }
+
+}
+select{
+    width:100%;
+}
+tfoot{
+
+    #prev{
+        text-align:left;
+        padding-left:10px;
+    }
+    #next{
+        text-align:right;
+        padding-right:10px;
+    }
+}

@@ -1,0 +1,177 @@
+.beau-comment{
+    margin-top:70px;
+    .comment-reply-title{
+        margin-top:0;
+    }
+    @include RP(L){
+        margin:0;
+    }
+    @include MIN(E){
+        margin:0;
+        .title-comment{
+            font-size:14px;
+        }
+        #title_reply{font-size:16px}
+    }
+    .title-comment, #title_reply{
+        @include RP(AM){
+            font-size: $body-size;
+        }
+        font-size:20px;
+        text-transform: uppercase;
+    }
+    #title_reply{
+        margin-top:100px;
+        margin-bottom:20px;
+    }
+    .sm-is-login{
+        .message{
+            width:100%;
+        }
+        #submit{
+            left:auto !important;
+            right:0;
+            top:200px !important;
+        }
+        textarea{
+            width:100%;
+        }
+    }
+}
+.detail-video-post{
+    .right-content{
+        padding:70px 40px 0 0;
+        @include RP(MBSM){
+            padding: 30px 0 0 0;
+        }
+        .detail-view{
+            margin-bottom:100px;
+            @include RP(AM){
+                margin-bottom: 50px;
+            }
+        }
+
+    }
+    @include RP(AM){
+        padding:0 30px;
+    }
+    @include MIN(E){
+        .right-content{
+            padding-top:0;
+        }
+    }
+}
+.comment-form{
+    li{
+        list-style: none;
+    }
+}
+.form-comment{
+    @include font-size(14px);
+    font-family: $bd-r;
+    color:$black_05;
+    padding-right:40px;
+    @include RP(AM){
+        padding: 0;
+    }
+    input[type="text"], textarea {
+        width:94%;
+        @include RP(AM){
+            width:100%;
+            font-size: 12px;
+            padding: 10px;
+        }
+        padding:15px 15px;
+        outline: none;
+        margin-bottom:20px;
+        border:1px solid $black_01;
+        &:hover, &:active, &:focus{
+            border:1px solid $black_07;
+        }
+    }
+    .btn-default{
+        font-weight:700;
+        width:100%;
+        padding:10px 15px;
+        background:$Black;
+        border-radius:0;
+        color:$White;
+        font-family: $bd-b;
+        letter-spacing: 3px;
+        @include font-size(12px);
+        &:hover{
+            background:$Black;
+            color:$White;
+        }
+    }
+    .text-area{
+        height:180px;
+    }
+    .beau-contact{
+        margin-top:30px;
+    }
+    .form-submit{
+        @include MQ(M){
+             position: relative;
+        }
+        @include RP(AM){
+            text-align:center;
+        }
+        #submit{
+            left: 0;
+            background: #000;
+            border-radius: 0;
+            color: #fff;
+            font-family: "pb-bold";
+            letter-spacing: 3px;
+            font-size: 12px;
+            text-transform: uppercase;
+            border:none;
+            outline:none;
+            @include MQ(M){
+                width: 47%;
+                position: absolute;
+                top: 175px;
+                padding: 14px 14px;
+            }
+            @include RP(AM){
+                height:30px;
+                font-size: 10px;
+                line-height: 30px;
+                padding:0 20px;
+            }
+        }
+    }
+}
+.notes{
+    font-family: $bd-r;
+    line-height: 1.5em;
+    color:$black_07;
+}
+.d-social2{
+    margin:35px 0;
+    span{
+        width:30px;
+        height:30px;
+        background:$black_01;
+        display:inline-block;
+        text-align:center;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        padding-top:5px;
+        margin-right:8px;
+        a{
+            color:$black_05;
+        }
+        &:hover{
+            background:$Black;
+            a{
+                color:$white_09;
+            }
+        }
+    }
+}
+.left-input{
+    padding-right:25px;
+}

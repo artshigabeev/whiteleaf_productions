@@ -1,0 +1,370 @@
+.director_img_cover{
+    @include MQ(L){
+        height:100vh;
+    }
+    //top:-120px;
+    z-index:-1;
+    position:relative;
+    .director_detail_name{
+        position:absolute;
+        font-family:$fr;
+        z-index:2;
+        color:$white_02;
+        @include font-size(120px);
+        @include OP(MS){
+            @include font-size(80px);
+            letter-spacing: 50px;
+            padding:0 10%;
+        }
+        @include center(xy);
+        letter-spacing: 50px;
+        font-weight:700;
+        width:100%;
+        text-align:center;
+        text-transform: uppercase;
+        padding:0 15%;
+        word-break:break-all;
+    }
+    img{
+        @include MQ(L){
+            height:100vh;
+            width:100%;
+        }
+        @include OP(MS){
+            width:100%;
+            height:100%;
+        }
+    }
+}
+.director-detail{
+    margin-top:150px;
+}
+.director-item{
+    .director-container{
+        width:100%;
+        margin:0;
+        padding:0;
+        @include RP(AM){
+            padding: 0 15px;
+        }
+        li{
+            display:table;
+            width:100%;
+             @include MIN(MAX){
+                height:700px !important;
+            }
+            .director-box{
+                width:50%;
+                @include RP(AM){
+                    width:100%;
+                }
+                position:relative;
+                height:100%;
+                img{
+                    width:100%;
+                    height:auto;
+
+                }
+            }
+            .director-content{
+                position:relative;
+                text-align:center;
+                .director-list{
+                    width:100%;
+                    @include MIN(MAX){
+                        padding: 170px 150px 0 150px !important;
+                        position:absolute;
+                         @include center(x);
+                    }
+                    @include MQ(L){
+                        padding:100px 100px 0 100px;
+                    }
+                    @include OP(TBM){
+                        padding: 30px 30px 0 30px;
+                        position:absolute;
+                         @include center(x);
+                    }
+                    @include OP(TBMS){
+                        padding:10px 30px 0 30px;
+                        position:absolute;
+                         @include center(x);
+                    }
+                    @include RP(AM){
+                        padding:15px 15px 30px 15px;
+                    }
+                    .director-name{
+                        @include font-size(50px);
+                        @include OP(TBM){
+                            @include font-size(30px);
+                        }
+                        @include OP(TBMS){
+                            @include font-size(25px);
+                        }
+                        @include RP(AM){
+                            @include font-size(25px);
+                        }
+                        font-family:$fr;
+                        font-weight: 700;
+                        a{
+                            color:$Black;
+                        }
+                    }
+                    .director-category{
+                        letter-spacing: 1px;
+                        @include font-size(12px);
+                        @include OP(TBMS){
+                            @include font-size(11px);
+                        }
+                        margin-top:5px;
+                    }
+                    .director-desc{
+                        font-family:$bd-r;
+                        line-height:1.5em;
+                        margin-top:30px;
+                        @include OP(TBM){
+                            margin-top: 20px;
+                        }
+                        @include OP(TBMS){
+                            @include font-size(13px);
+                            margin-top:10px;
+                        }
+                        @include RP(AM){
+                            margin-top: 15px;
+                            @include font-size(13px);
+                        }
+                    }
+                }
+            }
+            &:nth-child(2n+1){
+                .director-img{
+                    float:left;
+                }
+                .director-content{
+                    float:right;
+                }
+            }
+             &:nth-child(2n){
+                .director-img{
+                    float:right;
+                }
+                .director-content{
+                    float:left;
+                }
+             }
+        }
+        .view{
+            @include OP(MS){
+                margin-top: 20px;
+            }
+            @include RP(AM){
+                margin-top: 15px;
+            }
+        }
+    }
+
+}
+/*Detail director*/
+
+.director-detail {
+    .director-social{
+        padding-left:15px;
+        width: 100%;
+        clear:both;
+        @include RP(AM){
+            text-align: center;
+        }
+    }
+    .fl-title{
+        margin-bottom:50px;
+    }
+    .detail-director-desc {
+        font-size: 1.25em;
+        color: $Black;
+        text-transform: uppercase;
+        line-height: 1.7em;
+        padding:0 15px;
+        @include RP(AM){
+            text-align: center;
+            font-size: $body-size;
+        }
+        img{
+            opacity: 0.5;
+            &:hover{
+                opacity: 1;
+            }
+        }
+    }
+    .detail-derector-content {
+        font-family: $bd-r;
+        color: $black_05;
+        line-height: 1.7em;
+        padding:0 15px;
+        @include RP(AM){
+            @include font-size(13px);
+            line-height: 1.5em;
+            text-align: center;
+            margin-top:30px;
+        }
+    }
+}
+
+/*Detail timeline director*/
+.cd-container{
+    margin:150px 0 100px 0;
+    .fl-timeline{
+        margin-bottom:50px;
+    }
+}
+.relation-project{
+    margin-top:100px;
+    .relation-film{
+        padding:0 15px;
+        @include MQ(M){
+            min-height: 350px;
+        }
+        img{
+            width:100%;
+            height:auto;
+        }
+        .tab-p-category{
+            @include font-size(10px);
+            letter-spacing: 3px;
+        }
+    }
+    .fl-title{
+        margin-bottom:50px;
+    }
+}
+/**feature film director**/
+.fl-feature{
+    padding:150px 0 0 0;
+    position:relative;
+    &:before{
+        content:"";
+        background:#eaeaea;
+        width:100%;
+        height:85%;
+        position:absolute;
+        left:0;
+        top:0;
+    }
+    .feature-video{
+        padding:0;
+        margin-top:30px;
+    }
+    .feature-title{
+        margin-bottom:30px;
+        @include RP(AM){
+            margin-bottom:20px;
+        }
+        .fl-title-small{
+            @include font-size(14px);
+             @include RP(AM){
+                letter-spacing: 3px;
+                @include font-size(11px);
+                // margin-bottom:10px;
+            }
+            @include MIN(MAX){
+                letter-spacing: 3px;
+            }
+        }
+        .fl-title-big{
+            @include font-size(50px);
+            margin-bottom:-30px;
+            margin-top:0;
+            @include OP(TBM){
+                @include font-size(40px);
+                margin-bottom:-40px;
+            }
+             @include OP(TBMS){
+                @include font-size(35px);
+                margin-bottom:-30px;
+            }
+            @include RP(AM){
+                @include font-size(30px);
+                margin-bottom:0;
+                margin-top:0;
+            }
+            @include MIN(MM){
+                @include font-size(25px);
+            }
+            a{
+                color:$Black;
+            }
+        }
+    }
+    .tab-p-name a{
+        @include font-size(25px);
+    }
+}
+.feature-social{
+    width:100%;
+    clear:both;
+    text-align: center;
+    padding-top:20px;
+    ul{
+        li{
+            padding:0 25px;
+            @include RP(AM){
+                padding: 0 15px;
+            }
+            @include MIN(MM){
+                padding: 0 10px !important;
+            }
+            border-left:1px solid $black_01;
+            display:inline-block;
+            font-family: $bd-b;
+            @include font-size(12px);
+            &:first-child{
+                @include font-size(12px);
+                border-left:none;
+                letter-spacing: 8px;
+                @include RP(AM){
+                    letter-spacing: 4px;
+                }
+                padding-right:15px;
+            }
+            span{
+                color:$black_08;
+                font-size:$body-size;
+                @include RP(AM){
+                   font-size: 14px;
+                }
+                margin-right:5px;
+            }
+        }
+        ul{
+            li{
+                padding:0 0 0 20px;
+                @include RP(AM){
+                    font-size:13px
+                }
+                @include MIN(MM){
+                    padding: 0 0 0 10px !important;
+                }
+                border:none;
+                 &:first-child{
+                    font-size:14px;
+                    letter-spacing: 0;
+                    padding:0;
+                    font-family: $bd-r;
+                 }
+                 a{
+                    font-size:14px;
+                    color:$black_05;
+                    @include RP(AM){
+                         font-size:13px
+                    }
+                 }
+                &:hover{
+                    a{
+                        color:$Black;
+                    }
+                }
+            }
+        }
+    }
+}
+.relate-director{
+    margin-top:50px !important;
+}

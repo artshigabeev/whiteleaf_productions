@@ -1,0 +1,61 @@
+/*header -03 header-flim-blog4*/
+.header-flim-blog4{
+    height:120px;
+}
+.menu-top3{
+    width:100%;
+    margin-top: 30px;
+    .logo1{padding:0}
+    .menu{
+        padding:0;
+        text-transform: uppercase;
+        ul{
+            // display: table;
+            li{
+                list-style:none;
+                &:last-child{
+                    padding-right:0;
+                }
+                font-size:12px;
+                font-family: $bd-b;
+                //color:$black_07;
+                padding:0 14px;
+                list-style-type: none;
+                float:left;
+            }
+            ul.sub-menu{
+                -webkit-box-shadow: 0px 8px 30px 0px rgba(0, 0, 0, 0.20);
+                -moz-box-shadow:0px 8px 30px 0px rgba(0, 0, 0, 0.20);
+                box-shadow: 0px 8px 30px 0px rgba(0, 0, 0, 0.20);
+                padding-bottom:10px !important;
+            }
+        }
+    }
+}
+
+
+.logo{
+    position:absolute;
+    float:left;
+    z-index:10;
+}
+.lg-home3{ margin:30px 0 0 100px;}
+#wrapper{
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.home3{
+      padding:30px ;
+}
+
+// style slider3 home 3
+.slide3{
+    width:100%;
+    display:block;
+    img{
+        width:100% ;
+        height:auto;
+
+    }
+}

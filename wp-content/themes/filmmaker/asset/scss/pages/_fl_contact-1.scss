@@ -1,0 +1,250 @@
+
+.flim_mapview{
+    padding:0;
+    .show-hide,.show-hide2{
+        text-align: center;
+        line-height: 40px;
+        cursor: pointer;
+        .icon-ct{
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+        text-transform: uppercase;
+        font-size:12px;
+        position: absolute;
+        top: 6%;
+        z-index: 1;
+        right: 0;
+        width: 140px;
+        height: 40px;
+        background: $White;
+    }
+}
+#form-contact,#addres{
+    @include MQ(M){
+        display:none;
+        top:0;
+        position:absolute;
+        background:#111111;
+    }
+    width:100%;
+    height:100%;
+    color:$White;
+    .form{
+        @include MQ(M){
+            position: absolute;
+            @include center(xy);
+        }
+        text-align: center;
+        @include OP(MBM){
+            width:100%;
+        }
+        .white-desc{
+            line-height:1.4;
+            @include MQ(AD){
+                @include font-size(14px);
+            }
+        }
+        .list-social{
+
+            @include MQ(AD){
+                 padding:10px;
+            }
+            li{
+                padding:0 7px;
+                a{
+                    font-size:12px;
+                    font-family:$bd-r;
+                    width:30px;
+                    height:30px;
+                    background:#414141;
+                    border-radius:15px;
+                    position:relative;
+                    display:inline-block;
+                    @include RP(AM){
+                        background:$black_05;
+                        width:25px; height:25px;
+                    }
+                    i{
+                      position:absolute;
+                      @include center(xy);
+                    }
+                    &:hover{
+                        background:$White;
+                        @include RP(AM){
+                            background: $Black;
+                        }
+                        i{
+                            color:$black_09;
+                            @include RP(AM){
+                                color:$White;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .address-info{
+            line-height: 24px;
+            font-weight: 700;
+            @include RP(AM){
+                color:$black_05 ;
+                padding:0 15px;
+                @include font-size(13px);
+                line-height: 1.5em;
+            }
+        }
+        .title-white{
+            letter-spacing:7px;
+            color:$White;
+            font-size: $body-size;
+            margin-bottom:20px;
+            @include OP(TBMM){
+                @include font-size(14px);
+            }
+            @include RP(AM){
+                color:$Black;
+            }
+        }
+        .info{
+            margin:0 auto;
+            i{
+                color:$white_04;
+            }
+        }
+        ul{list-style:none;}
+        a{
+            color: $white_02;
+            &:hover{
+                color: $White;
+            }
+        }
+    }
+}
+.c-right{
+     @include MQ(AD){
+        padding-right:10px !important;
+    }
+}
+.c-left{
+    @include MQ(AD){
+        padding-left:10px !important;
+    }
+}
+.ct_form{
+    @include RP(AM){
+        padding: 0 15px;
+    }
+    padding:0 50px;
+    margin-top:30px;
+    span.wpcf7-not-valid-tip{
+        position:relative;
+        top:-10px;
+        @include transition('slow');
+    }
+    input[type="text"], input[type="email"], textarea {
+        background:none;
+        border:0;
+        // color:$white_05;
+        padding:10px 20px;
+        width:100%;
+        margin-bottom:20px;
+        box-shadow:none;
+        font-size:12px;
+       border:1px solid $white_03;
+       @include RP(AM){
+            border: 1px solid $black_03;
+            color:$black_05;
+       }
+        &::-webkit-input-placeholder, &::-moz-placeholder {
+            color: $white_03;
+            @include RP(AM){
+                color:$black_02;
+            }
+        }
+        &:focus{
+            outline:none;
+        }
+        &:hover, &:active, &:focus{
+            border-color:$White;
+            @include RP(AM){
+                border-color: $Black;
+            }
+        }
+    }
+    input[type="submit"]{
+        width:100% !important;
+        padding:15px 0;
+        border:none;
+        color:$Black;
+        background:$White;
+        @include RP(AM){
+            background: $black_05;
+            color:$White;
+            padding:12px;
+            @include font-size(10px);
+        }
+        font-family: $bd-r;
+        @include font-size(12px);
+        letter-spacing: 2px;
+    }
+    label{
+        width:100%;
+        position:relative;
+        i{
+            position:absolute;
+            right:30%;
+            top:17px;
+            color:$Black;
+            @include RP(AM){
+                color:$White;
+                right:28%;
+            }
+            font-size:14px;
+            @include RP(MB){
+                display: none;
+            }
+        }
+    }
+}
+#flim_mapview{
+    width: 100%;
+    height:1000px;
+    @include OP(TBM){
+        height:900px;
+    }
+    @include OP(TBMS){
+        height:800px;
+    }
+    @include RP(AM){
+        display: none;
+    }
+}
+.fl-row{
+    padding:0 300px;
+    @include OP(TBM){
+        padding:0 150px;
+    }
+     @include OP(TBMS){
+        padding:0 100px;
+    }
+    @include RP(AM){
+        padding:0 15px;
+    }
+    @include MIN(MM){
+        padding:0 !important;
+    }
+    display:table;
+}
+#form-contact2{
+    @extend #form-contact;
+    display:block !important;
+}
+.show-hide,.show-hide2{
+    box-shadow: 0px 0px 15px 2px $black_01;
+    @include RP(AM){
+        display:none;
+    }
+}

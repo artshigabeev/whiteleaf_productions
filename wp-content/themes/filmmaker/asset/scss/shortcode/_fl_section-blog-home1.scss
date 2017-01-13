@@ -1,0 +1,86 @@
+ /*==== blog ===== */
+.blog{
+    font-family: $fr;
+    font-size:30px;
+    .row{
+        margin:0;
+        padding-top:50px;
+    }
+    .content-blog-item{
+        padding:50px 0;
+        display:table;
+        position:relative;
+        a{
+            color:$Black;
+            b{
+                font-family:$bd-b;
+                font-size:30px;
+            }
+            p{
+                font-family:$bd-b;
+                font-size:16px;
+            }
+        }
+        .view-point{
+            b{
+                font-size:14px;
+                color:$black_05;
+                padding:0 10px;
+            }
+            font-size:16px;
+            padding-top:10px;
+            .fa-comment-o{
+                font-size:13px;
+                opacity:0.4;
+                padding:0 0px 0 20px;
+                border-left:1px solid $black_02;
+            }
+            .fa-eye{
+                font-size:13px;
+                opacity:0.4;
+                padding:0 15px 0 0;
+            }
+        }
+        .new-date{
+            line-height: 25px;
+            text-align: center;
+            position: relative;
+            color:$black_05;
+            font-weight:700;
+            -webkit-transform: translateX(-50%) translateY(60%);
+            -ms-transform: translateX(-50%) translateY(60%);
+            transform: translateX(-50%) translateY(60%);
+            b{
+                font-size:30px;
+                font-family:$bd-b
+            }
+            .my{
+                font-size:14px;
+                font-family:$bd-b;
+                text-transform: uppercase;
+            }
+        }
+        .title-blog{
+            @include transition(slow);
+            font-size:30px;
+            padding: 10px 50px 10px 70px;
+            color:$black_08;
+        }
+        &:hover{
+            .new-date{color:$Black}
+            .title-blog{
+                border-left:5px solid $Black;
+                -webkit-transition:all 0.5s linear;
+                -moz-transition:all 0.5s linear;
+                transition:all 0.5s linear;
+                color:$Black;
+                padding: 10px 80px 10px 40px;
+                b{
+                    font-weight:900;
+                    color:#000000;}
+            }
+        }
+
+    }
+}
+ /*==== end blog ===== */

@@ -1,0 +1,62 @@
+/*
+ Style Social in detail film
+*/
+
+.d-social2{
+    margin:35px 0;
+    span{
+        width:30px;
+        height:30px;
+        background:$black_01;
+        display:inline-block;
+        text-align:center;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        padding-top:5px;
+        margin-right:8px;
+        a{
+            color:$black_05;
+        }
+        &:hover{
+            background:$Black;
+            a{
+                color:$white_09;
+            }
+        }
+    }
+}
+.template_share{
+    position:relative;
+    &:hover{
+        ul{
+            display: block !important;
+            z-index:2;
+            opacity:1;
+        }
+    }
+    ul{
+        position:absolute;
+        background:white;
+        @include transition('fast');
+        opacity:0;
+        @include center(x);
+        padding:5px 0;
+        background-color: #FDFDFD;
+        background-repeat: repeat-x;
+        background: -webkit-gradient(linear, 50% 0%, 0% 100%, from(#FDFDFD), to(#F1F1F1));
+        background: -webkit-linear-gradient(top, #F1F1F1, #FDFDFD);
+        background: -moz-linear-gradient(top, #F1F1F1, #FDFDFD);
+        background: -ms-linear-gradient(top, #F1F1F1, #FDFDFD);
+        background: -o-linear-gradient(top, #F1F1F1, #FDFDFD);
+        li{
+            list-style:none;
+            border-right:none !important;
+            &:first-child{
+                display:none;
+            }
+            padding:0 5px;
+
+        }
+    }
+}

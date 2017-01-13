@@ -1,0 +1,72 @@
+.team-film-item{
+    width:100%;
+    .team-film-container{
+        position:relative;
+        img{
+            width:100%;
+            height:100%;
+            @include transition('slow');
+        }
+        &:hover{
+            .team-content{
+                opacity:1;
+                top:50%;
+            }
+        }
+    }
+    .ms-slide{
+        background:$Black;
+        &:hover{
+            img{
+                opacity:0.5;
+            }
+        }
+    }
+}
+.team-content{
+    position:absolute;
+    color:$White;
+    z-index:2;
+    @include center(xy);
+    width:100%;
+    text-align: center;
+    opacity: 0;
+    @include transition;
+    top:65%;
+    .team-name{
+        font-family:$fr;
+        font-size:1.875em;
+        line-height:38px;
+    }
+    .team-job{
+        font-family:$bd-b;
+        @include font-size(12px);
+        letter-spacing: 1.5px;
+        margin:10px 0 35px 0;
+
+    }
+    .team-social{
+        text-align: -webkit-center;
+
+        span{
+            height:1.563em;
+            width:1.6em;
+            display:inline-block;
+            background:#4d4d4d;
+            border-radius:50%;
+            margin-right:5px;
+            a{
+                font-size:0.625em;
+                color:#fff;
+                font-family: $bd-b;
+            }
+            &:hover{
+                background:#fff;
+                a{
+                    color:#4d4d4d;
+                }
+            }
+        }
+
+    }
+}
