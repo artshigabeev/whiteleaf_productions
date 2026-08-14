@@ -1,0 +1,22 @@
+# This directory must never be served over HTTP.
+#
+# The site's root .htaccess passes through any request that maps to a real file
+# (RewriteCond %{REQUEST_FILENAME} !-f), so without this deny rule a request to
+# /das-bot/.env would return broker credentials in plain text, and /das-bot/logs/
+# would expose account numbers and full order history.
+#
+# Defense in depth only. This relies on AllowOverride being enabled, which you
+# do not control from here. The real fix is to deploy this package OUTSIDE the
+# web root entirely — it is a standalone Python application and has no reason
+# to live under a document root.
+
+# Apache 2.4+
+<IfModule mod_authz_core.c>
+    Require all denied
+</IfModule>
+
+# Apache 2.2
+<IfModule !mod_authz_core.c>
+    Order deny,allow
+    Deny from all
+</IfModule>
