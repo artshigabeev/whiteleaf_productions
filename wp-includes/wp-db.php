@@ -14,6 +14,19 @@
  */
 define( 'EZSQL_VERSION', 'WP1.25' );
 
+/*
+ * PHP 8.1 changed the mysqli default error mode to throw mysqli_sql_exception.
+ * wpdb predates that: it calls mysqli_real_connect() and mysqli_query() expecting
+ * a falsey return, then inspects connect_errno / $this->last_error to render the
+ * "Error establishing a database connection" page or a formatted query error.
+ * Under the throwing default those branches are unreachable and any database
+ * error escapes as an uncaught fatal, blanking the response instead. Restoring
+ * the pre-8.1 reporting mode hands error handling back to wpdb.
+ */
+if ( function_exists( 'mysqli_report' ) ) {
+	mysqli_report( MYSQLI_REPORT_OFF );
+}
+
 /**
  * @since 0.71
  */

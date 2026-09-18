@@ -59,7 +59,7 @@ function _twitter_api_cache_get( $key ){
     if( TWITTER_CACHE_APC ){
         return apc_fetch( $key );
     }
-    if( isset($key{45}) ){
+    if( isset($key[45]) ){
         $key = 'twcache_'.md5($key);
     }
     return get_transient( $key );
@@ -77,7 +77,7 @@ function _twitter_api_cache_set( $key, $value, $ttl ){
         apc_store( $key, $value, $ttl );
         return;
     }
-    if( isset($key{45}) ){
+    if( isset($key[45]) ){
         $key = 'twcache_'.md5($key);
     }
     if( ! $ttl ){

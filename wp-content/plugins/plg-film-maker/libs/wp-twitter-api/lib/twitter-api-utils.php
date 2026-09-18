@@ -116,7 +116,7 @@ function twitter_api_html_linkify_urls( $src, $target = '_blank' ){
 function twitter_api_html_linkify_callback( array $r ){
     list( , $proto, $label ) = $r;
     $href = $proto.html_entity_decode( $label );
-    if( isset($label{30}) ){
+    if( isset($label[30]) ){
         $label = substr_replace( $label, '&hellip;', 30 );
     }
     $label = rtrim( str_replace( '#', '&#35;', $label ), '/#?');

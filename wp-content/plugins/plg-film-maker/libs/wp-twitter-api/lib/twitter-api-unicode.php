@@ -12,7 +12,7 @@ function twitter_api_utf8_array( $s ){
     $a = array();
     $len = strlen($s);
     for( $i = 0; $i < $len; $i++ ){
-        $c = $s{ $i };
+        $c = $s[ $i ];
         $n = ord( $c );
         // 7-bit ASCII
         if( 0 === ( $n & 128 ) ){
@@ -121,7 +121,7 @@ function twitter_api_unicode_implode( array $codes, $glue = '-' ){
 function twitter_api_unicode_debug_string( $raw ){
     $debug = array();
     for( $i = 0; $i < strlen($raw); $i++ ){
-        $debug[] = sprintf( '\\x%0X', ord( $raw{$i} ) );
+        $debug[] = sprintf( '\\x%0X', ord( $raw[$i] ) );
     }
     return implode('',$debug);
 }   
